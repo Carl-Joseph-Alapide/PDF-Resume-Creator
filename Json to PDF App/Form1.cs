@@ -12,9 +12,9 @@ using Newtonsoft.Json;
 
 namespace Json_to_PDF_App
 {
-    public partial class Form1 : Form
+    public partial class formResumeCreator : Form
     {
-        public Form1()
+        public formResumeCreator()
         {
             InitializeComponent();
         }
@@ -36,6 +36,11 @@ namespace Json_to_PDF_App
             Resume.WriteLine(JSON.Contact_number);
             Resume.WriteLine(JSON.Address);
             Resume.Close();
-        } 
+        }
+
+        private void formResumeCreator_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -16,7 +16,7 @@ namespace Json_to_PDF_App
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new formResumeCreator());
         }
     }
 }
