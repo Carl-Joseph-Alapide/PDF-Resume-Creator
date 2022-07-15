@@ -23,18 +23,30 @@ namespace Json_to_PDF_App
         {
             JSON JSON = new JSON
             {
-                Name = "Carl",
-                Birthday = "May 27, 2003",
-                Contact_number = "09218007914",
-                Address = "Bagong Silang Caloocan City"
+                Name = txtbxFullName.Text,
+                Birthday = txtbxBirthday.Text,
+                Address = txtbxAddress.Text,
+                Contact_number = txtbxMobile.Text,
+                Email = txtbxEmail.Text,
+                Facebook = txtbxFacebook.Text,
+                Education = txtbxEducation.Text,
+                Skills = txtbxSkills.Text,
+                Work = txtbxWork.Text,
+                Character_Ref = TxtbxCharacterREf.Text
             };
             string output = JsonConvert.SerializeObject(JSON);
             txtbxJSON.Text = output;
             StreamWriter Resume = new StreamWriter(@"C:\Users\Carl Joseph\source\repos\Json to PDF App\Json to PDF App\Resume\Resume.json");
             Resume.WriteLine(JSON.Name);
             Resume.WriteLine(JSON.Birthday);
-            Resume.WriteLine(JSON.Contact_number);
             Resume.WriteLine(JSON.Address);
+            Resume.WriteLine(JSON.Contact_number);
+            Resume.WriteLine(JSON.Email);
+            Resume.WriteLine(JSON.Facebook);
+            Resume.WriteLine(JSON.Education);
+            Resume.WriteLine(JSON.Skills);
+            Resume.WriteLine(JSON.Work);
+            Resume.WriteLine(JSON.Character_Ref);
             Resume.Close();
         }
 

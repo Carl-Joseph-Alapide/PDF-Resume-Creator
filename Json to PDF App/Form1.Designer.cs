@@ -40,17 +40,17 @@
             this.lblHeader = new System.Windows.Forms.Label();
             this.txtbxEmail = new System.Windows.Forms.TextBox();
             this.lblEmail = new System.Windows.Forms.Label();
-            this.lblSocialMedia = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lblFacebook = new System.Windows.Forms.Label();
+            this.txtbxFacebook = new System.Windows.Forms.TextBox();
             this.lblBirthday = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtbxBirthday = new System.Windows.Forms.TextBox();
             this.lblEducation = new System.Windows.Forms.Label();
             this.txtbxEducation = new System.Windows.Forms.TextBox();
             this.txtbxSkills = new System.Windows.Forms.TextBox();
             this.lblSkills = new System.Windows.Forms.Label();
             this.txtbxWork = new System.Windows.Forms.TextBox();
             this.lblWork = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.TxtbxCharacterREf = new System.Windows.Forms.TextBox();
             this.lblCharacterRef = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -146,21 +146,21 @@
             this.lblEmail.TabIndex = 10;
             this.lblEmail.Text = "Email";
             // 
-            // lblSocialMedia
+            // lblFacebook
             // 
-            this.lblSocialMedia.AutoSize = true;
-            this.lblSocialMedia.Location = new System.Drawing.Point(337, 165);
-            this.lblSocialMedia.Name = "lblSocialMedia";
-            this.lblSocialMedia.Size = new System.Drawing.Size(55, 13);
-            this.lblSocialMedia.TabIndex = 12;
-            this.lblSocialMedia.Text = "Facebook";
+            this.lblFacebook.AutoSize = true;
+            this.lblFacebook.Location = new System.Drawing.Point(337, 165);
+            this.lblFacebook.Name = "lblFacebook";
+            this.lblFacebook.Size = new System.Drawing.Size(55, 13);
+            this.lblFacebook.TabIndex = 12;
+            this.lblFacebook.Text = "Facebook";
             // 
-            // textBox1
+            // txtbxFacebook
             // 
-            this.textBox1.Location = new System.Drawing.Point(340, 181);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(160, 20);
-            this.textBox1.TabIndex = 11;
+            this.txtbxFacebook.Location = new System.Drawing.Point(340, 181);
+            this.txtbxFacebook.Name = "txtbxFacebook";
+            this.txtbxFacebook.Size = new System.Drawing.Size(160, 20);
+            this.txtbxFacebook.TabIndex = 11;
             // 
             // lblBirthday
             // 
@@ -171,12 +171,12 @@
             this.lblBirthday.TabIndex = 14;
             this.lblBirthday.Text = "Birthday";
             // 
-            // textBox2
+            // txtbxBirthday
             // 
-            this.textBox2.Location = new System.Drawing.Point(317, 84);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(183, 20);
-            this.textBox2.TabIndex = 13;
+            this.txtbxBirthday.Location = new System.Drawing.Point(317, 84);
+            this.txtbxBirthday.Name = "txtbxBirthday";
+            this.txtbxBirthday.Size = new System.Drawing.Size(183, 20);
+            this.txtbxBirthday.TabIndex = 13;
             // 
             // lblEducation
             // 
@@ -229,13 +229,13 @@
             this.lblWork.TabIndex = 19;
             this.lblWork.Text = "Work Experience";
             // 
-            // textBox3
+            // TxtbxCharacterREf
             // 
-            this.textBox3.Location = new System.Drawing.Point(35, 507);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(465, 54);
-            this.textBox3.TabIndex = 22;
+            this.TxtbxCharacterREf.Location = new System.Drawing.Point(35, 507);
+            this.TxtbxCharacterREf.Multiline = true;
+            this.TxtbxCharacterREf.Name = "TxtbxCharacterREf";
+            this.TxtbxCharacterREf.Size = new System.Drawing.Size(465, 54);
+            this.TxtbxCharacterREf.TabIndex = 22;
             // 
             // lblCharacterRef
             // 
@@ -252,7 +252,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 601);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.TxtbxCharacterREf);
             this.Controls.Add(this.lblCharacterRef);
             this.Controls.Add(this.txtbxWork);
             this.Controls.Add(this.lblWork);
@@ -261,9 +261,9 @@
             this.Controls.Add(this.txtbxEducation);
             this.Controls.Add(this.lblEducation);
             this.Controls.Add(this.lblBirthday);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.lblSocialMedia);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtbxBirthday);
+            this.Controls.Add(this.lblFacebook);
+            this.Controls.Add(this.txtbxFacebook);
             this.Controls.Add(this.lblEmail);
             this.Controls.Add(this.txtbxEmail);
             this.Controls.Add(this.lblHeader);
@@ -297,17 +297,17 @@
         private System.Windows.Forms.Label lblHeader;
         private System.Windows.Forms.TextBox txtbxEmail;
         private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.Label lblSocialMedia;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label lblFacebook;
+        private System.Windows.Forms.TextBox txtbxFacebook;
         private System.Windows.Forms.Label lblBirthday;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtbxBirthday;
         private System.Windows.Forms.Label lblEducation;
         private System.Windows.Forms.TextBox txtbxEducation;
         private System.Windows.Forms.TextBox txtbxSkills;
         private System.Windows.Forms.Label lblSkills;
         private System.Windows.Forms.TextBox txtbxWork;
         private System.Windows.Forms.Label lblWork;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox TxtbxCharacterREf;
         private System.Windows.Forms.Label lblCharacterRef;
     }
 }
