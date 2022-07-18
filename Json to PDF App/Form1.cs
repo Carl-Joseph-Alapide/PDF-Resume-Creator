@@ -20,38 +20,62 @@ namespace Json_to_PDF_App
 
         }
 
-        static void Main(string[] args)
-        {
+        //static void Main(string[] args)
+        //{
 
-            var Resume = new Resume_Content
-            {
-                Name = "Carl Joseph B. Alapide",
-                Birthday = "May 27, 2003",
-                Address = "Ph8 B block 70 lot 10 Bagong Silang Caloocan city",
-                Mobile_no = "09218007914",
-                Email = "carljosephalapide@gmail.com",
-                Facebook = "Carl Josep Alapide",
-                Education = "Polytechnic University of the Philippines",
-                Skills = "Programming Skills",
-                Work_Exp = "Call center Agent",
-                Char_Ref = "Nerissa Cortez"
-            };
+        //    //var Resume = new Resume_Content
+        //    //{
+              
+        //    //};
 
-        }
-        [Serializable]
+        //}
+        //[Serializable]
 
         private class Resume_Content
         {
             public string Name { get; set; }
-            public string Birthday { get; set; }
+            public string Position { get; set; }
+            public string Career_Objective { get; set; }
+            public string ContactNo { get; set; }
+            public string EmailAddress { get; set; }
             public string Address { get; set; }
-            public string Mobile_no { get; set; }
-            public string Email { get; set; }
             public string Facebook { get; set; }
-            public string Education { get; set; }
-            public string Skills { get; set; }
-            public string Work_Exp { get; set; }
-            public string Char_Ref { get; set; }
+            public string School { get; set; }
+            public string Course { get; set; }
+            public string School_Address { get; set; }
+            public string School_Year { get; set; }
+            public string School1 { get; set; }
+            public string Strand { get; set; }
+            public string School_Year1 { get; set; }
+            public string School2 { get; set; }
+            public string School_Address2 { get; set; }
+            public string School_Year2 { get; set; }
+            public string School3 { get; set; }
+            public string School_Address3 { get; set; }
+            public string School_Year3 { get; set; }
+            public string School_4 { get; set; }
+            public string School_Address_4 { get; set; }
+            public string School_Year_4 { get; set; }
+            public string Skill1 { get; set; }
+            public string Skill2 { get; set; }
+            public string Skill3 { get; set; }
+            public string Skill4 { get; set; }
+            public string Skill5 { get; set; }
+            public string Skill6 { get; set; }
+            public string Github_Account_Link { get; set; }
+            public string Character_Referenc_Name { get; set; }
+            public string Character_Reference_Company { get; set; }
+            public string Character_Reference_Position { get; set; }
+            public string Character_Reference_Mobile { get; set; }
+            public string Character_Reference_Name1 { get; set; }
+            public string Character_Reference_Company1 { get; set; }
+            public string Character_Reference_Position1 { get; set; }
+            public string Character_Reference_Mobile1 { get; set; }
+            public string Character_Reference_Name2 { get; set; }
+            public string Character_Reference_Company2 { get; set; }
+            public string Character_Reference_Position2 { get; set; }
+            public string Character_Reference_Mobile2 { get; set; }
+
 
         }
 
@@ -59,33 +83,7 @@ namespace Json_to_PDF_App
 
         private void BtnJson_Click(object sender, EventArgs e)
         {
-            JSON JSON = new JSON
-            {
-                Name = txtbxFullName.Text,
-                Birthday = txtbxBirthday.Text,
-                Address = txtbxAddress.Text,
-                Contact_number = txtbxMobile.Text,
-                Email = txtbxEmail.Text,
-                Facebook = txtbxFacebook.Text,
-                Education = txtbxEducation.Text,
-                Skills = txtbxSkills.Text,
-                Work = txtbxWork.Text,
-                Character_Ref = TxtbxCharacterREf.Text
-            };
-            string output = JsonConvert.SerializeObject(JSON);
-            txtbxJSON.Text = output;
-            StreamWriter Resume = new StreamWriter(@"C:\Users\Carl Joseph\source\repos\Json to PDF App\Json to PDF App\Resume\Resume.json");
-            Resume.WriteLine(JSON.Name);
-            Resume.WriteLine(JSON.Birthday);
-            Resume.WriteLine(JSON.Address);
-            Resume.WriteLine(JSON.Contact_number);
-            Resume.WriteLine(JSON.Email);
-            Resume.WriteLine(JSON.Facebook);
-            Resume.WriteLine(JSON.Education);
-            Resume.WriteLine(JSON.Skills);
-            Resume.WriteLine(JSON.Work);
-            Resume.WriteLine(JSON.Character_Ref);
-            Resume.Close();
+            
         }
 
         private void formResumeCreator_Load(object sender, EventArgs e)
@@ -95,7 +93,8 @@ namespace Json_to_PDF_App
 
         private void btnRead_Click(object sender, EventArgs e)
         {
-           
+            var Json_Path = @"C:\Users\Carl Joseph\source\repos\Json to PDF App\Json to PDF App\Resume\resume.json";
+            String Json_Content = File.ReadAllText(Json_Path);
         }
     }
 }
