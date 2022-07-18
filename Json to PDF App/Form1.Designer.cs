@@ -52,6 +52,7 @@
             this.lblWork = new System.Windows.Forms.Label();
             this.TxtbxCharacterREf = new System.Windows.Forms.TextBox();
             this.lblCharacterRef = new System.Windows.Forms.Label();
+            this.btnRead = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtbxJSON
@@ -247,11 +248,22 @@
             this.lblCharacterRef.Text = "Character Reference";
             this.lblCharacterRef.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
+            // btnRead
+            // 
+            this.btnRead.Location = new System.Drawing.Point(614, 277);
+            this.btnRead.Name = "btnRead";
+            this.btnRead.Size = new System.Drawing.Size(75, 23);
+            this.btnRead.TabIndex = 23;
+            this.btnRead.Text = "Read Json";
+            this.btnRead.UseVisualStyleBackColor = true;
+            this.btnRead.Click += new System.EventHandler(this.btnRead_Click);
+            // 
             // formResumeCreator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 601);
+            this.Controls.Add(this.btnRead);
             this.Controls.Add(this.TxtbxCharacterREf);
             this.Controls.Add(this.lblCharacterRef);
             this.Controls.Add(this.txtbxWork);
@@ -309,6 +321,7 @@
         private System.Windows.Forms.Label lblWork;
         private System.Windows.Forms.TextBox TxtbxCharacterREf;
         private System.Windows.Forms.Label lblCharacterRef;
+        private System.Windows.Forms.Button btnRead;
     }
 }
 

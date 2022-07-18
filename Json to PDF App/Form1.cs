@@ -17,7 +17,45 @@ namespace Json_to_PDF_App
         public formResumeCreator()
         {
             InitializeComponent();
+
         }
+
+        static void Main(string[] args)
+        {
+
+            var Resume = new Resume_Content
+            {
+                Name = "Carl Joseph B. Alapide",
+                Birthday = "May 27, 2003",
+                Address = "Ph8 B block 70 lot 10 Bagong Silang Caloocan city",
+                Mobile_no = "09218007914",
+                Email = "carljosephalapide@gmail.com",
+                Facebook = "Carl Josep Alapide",
+                Education = "Polytechnic University of the Philippines",
+                Skills = "Programming Skills",
+                Work_Exp = "Call center Agent",
+                Char_Ref = "Nerissa Cortez"
+            };
+
+        }
+        [Serializable]
+
+        private class Resume_Content
+        {
+            public string Name { get; set; }
+            public string Birthday { get; set; }
+            public string Address { get; set; }
+            public string Mobile_no { get; set; }
+            public string Email { get; set; }
+            public string Facebook { get; set; }
+            public string Education { get; set; }
+            public string Skills { get; set; }
+            public string Work_Exp { get; set; }
+            public string Char_Ref { get; set; }
+
+        }
+
+
 
         private void BtnJson_Click(object sender, EventArgs e)
         {
@@ -53,6 +91,11 @@ namespace Json_to_PDF_App
         private void formResumeCreator_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnRead_Click(object sender, EventArgs e)
+        {
+           
         }
     }
 }
