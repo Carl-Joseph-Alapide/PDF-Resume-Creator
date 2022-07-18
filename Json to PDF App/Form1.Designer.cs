@@ -45,13 +45,15 @@
             this.txtbxSkills = new System.Windows.Forms.TextBox();
             this.lblCharRef = new System.Windows.Forms.Label();
             this.txtbxCharRef = new System.Windows.Forms.TextBox();
+            this.txtbxCharRef1 = new System.Windows.Forms.TextBox();
+            this.txtbxCharRef2 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lblHeader
             // 
             this.lblHeader.AutoSize = true;
             this.lblHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblHeader.Location = new System.Drawing.Point(56, 9);
+            this.lblHeader.Location = new System.Drawing.Point(251, 9);
             this.lblHeader.Name = "lblHeader";
             this.lblHeader.Size = new System.Drawing.Size(409, 39);
             this.lblHeader.TabIndex = 8;
@@ -59,7 +61,7 @@
             // 
             // btnRead
             // 
-            this.btnRead.Location = new System.Drawing.Point(198, 580);
+            this.btnRead.Location = new System.Drawing.Point(361, 682);
             this.btnRead.Name = "btnRead";
             this.btnRead.Size = new System.Drawing.Size(117, 47);
             this.btnRead.TabIndex = 23;
@@ -71,7 +73,7 @@
             // 
             this.txtbxName.Location = new System.Drawing.Point(37, 83);
             this.txtbxName.Name = "txtbxName";
-            this.txtbxName.Size = new System.Drawing.Size(228, 20);
+            this.txtbxName.Size = new System.Drawing.Size(302, 20);
             this.txtbxName.TabIndex = 24;
             // 
             // lblName
@@ -86,7 +88,7 @@
             // lblPosition
             // 
             this.lblPosition.AutoSize = true;
-            this.lblPosition.Location = new System.Drawing.Point(268, 67);
+            this.lblPosition.Location = new System.Drawing.Point(34, 110);
             this.lblPosition.Name = "lblPosition";
             this.lblPosition.Size = new System.Drawing.Size(47, 13);
             this.lblPosition.TabIndex = 27;
@@ -94,15 +96,15 @@
             // 
             // txtbxPosition
             // 
-            this.txtbxPosition.Location = new System.Drawing.Point(271, 83);
+            this.txtbxPosition.Location = new System.Drawing.Point(37, 126);
             this.txtbxPosition.Name = "txtbxPosition";
-            this.txtbxPosition.Size = new System.Drawing.Size(228, 20);
+            this.txtbxPosition.Size = new System.Drawing.Size(302, 20);
             this.txtbxPosition.TabIndex = 26;
             // 
             // lblObjective
             // 
             this.lblObjective.AutoSize = true;
-            this.lblObjective.Location = new System.Drawing.Point(34, 114);
+            this.lblObjective.Location = new System.Drawing.Point(355, 69);
             this.lblObjective.Name = "lblObjective";
             this.lblObjective.Size = new System.Drawing.Size(55, 13);
             this.lblObjective.TabIndex = 29;
@@ -110,16 +112,16 @@
             // 
             // txtbxObjective
             // 
-            this.txtbxObjective.Location = new System.Drawing.Point(37, 130);
+            this.txtbxObjective.Location = new System.Drawing.Point(358, 85);
             this.txtbxObjective.Multiline = true;
             this.txtbxObjective.Name = "txtbxObjective";
-            this.txtbxObjective.Size = new System.Drawing.Size(462, 61);
+            this.txtbxObjective.Size = new System.Drawing.Size(433, 61);
             this.txtbxObjective.TabIndex = 28;
             // 
             // lblContact
             // 
             this.lblContact.AutoSize = true;
-            this.lblContact.Location = new System.Drawing.Point(34, 203);
+            this.lblContact.Location = new System.Drawing.Point(30, 339);
             this.lblContact.Name = "lblContact";
             this.lblContact.Size = new System.Drawing.Size(79, 13);
             this.lblContact.TabIndex = 31;
@@ -127,16 +129,16 @@
             // 
             // txtbxContact
             // 
-            this.txtbxContact.Location = new System.Drawing.Point(37, 219);
+            this.txtbxContact.Location = new System.Drawing.Point(33, 355);
             this.txtbxContact.Multiline = true;
             this.txtbxContact.Name = "txtbxContact";
-            this.txtbxContact.Size = new System.Drawing.Size(462, 61);
+            this.txtbxContact.Size = new System.Drawing.Size(306, 129);
             this.txtbxContact.TabIndex = 30;
             // 
             // lblEducation
             // 
             this.lblEducation.AutoSize = true;
-            this.lblEducation.Location = new System.Drawing.Point(34, 295);
+            this.lblEducation.Location = new System.Drawing.Point(351, 163);
             this.lblEducation.Name = "lblEducation";
             this.lblEducation.Size = new System.Drawing.Size(124, 13);
             this.lblEducation.TabIndex = 33;
@@ -144,16 +146,16 @@
             // 
             // txtbxEducation
             // 
-            this.txtbxEducation.Location = new System.Drawing.Point(37, 311);
+            this.txtbxEducation.Location = new System.Drawing.Point(354, 179);
             this.txtbxEducation.Multiline = true;
             this.txtbxEducation.Name = "txtbxEducation";
-            this.txtbxEducation.Size = new System.Drawing.Size(462, 61);
+            this.txtbxEducation.Size = new System.Drawing.Size(437, 305);
             this.txtbxEducation.TabIndex = 32;
             // 
             // lblSkills
             // 
             this.lblSkills.AutoSize = true;
-            this.lblSkills.Location = new System.Drawing.Point(34, 383);
+            this.lblSkills.Location = new System.Drawing.Point(34, 163);
             this.lblSkills.Name = "lblSkills";
             this.lblSkills.Size = new System.Drawing.Size(31, 13);
             this.lblSkills.TabIndex = 35;
@@ -161,16 +163,16 @@
             // 
             // txtbxSkills
             // 
-            this.txtbxSkills.Location = new System.Drawing.Point(37, 399);
+            this.txtbxSkills.Location = new System.Drawing.Point(33, 179);
             this.txtbxSkills.Multiline = true;
             this.txtbxSkills.Name = "txtbxSkills";
-            this.txtbxSkills.Size = new System.Drawing.Size(462, 61);
+            this.txtbxSkills.Size = new System.Drawing.Size(306, 147);
             this.txtbxSkills.TabIndex = 34;
             // 
             // lblCharRef
             // 
             this.lblCharRef.AutoSize = true;
-            this.lblCharRef.Location = new System.Drawing.Point(34, 470);
+            this.lblCharRef.Location = new System.Drawing.Point(30, 487);
             this.lblCharRef.Name = "lblCharRef";
             this.lblCharRef.Size = new System.Drawing.Size(106, 13);
             this.lblCharRef.TabIndex = 37;
@@ -178,17 +180,36 @@
             // 
             // txtbxCharRef
             // 
-            this.txtbxCharRef.Location = new System.Drawing.Point(37, 486);
+            this.txtbxCharRef.Location = new System.Drawing.Point(33, 503);
             this.txtbxCharRef.Multiline = true;
             this.txtbxCharRef.Name = "txtbxCharRef";
-            this.txtbxCharRef.Size = new System.Drawing.Size(462, 61);
+            this.txtbxCharRef.Size = new System.Drawing.Size(234, 156);
             this.txtbxCharRef.TabIndex = 36;
+            // 
+            // txtbxCharRef1
+            // 
+            this.txtbxCharRef1.Location = new System.Drawing.Point(293, 503);
+            this.txtbxCharRef1.Multiline = true;
+            this.txtbxCharRef1.Name = "txtbxCharRef1";
+            this.txtbxCharRef1.Size = new System.Drawing.Size(234, 156);
+            this.txtbxCharRef1.TabIndex = 38;
+            // 
+            // txtbxCharRef2
+            // 
+            this.txtbxCharRef2.Location = new System.Drawing.Point(557, 503);
+            this.txtbxCharRef2.Multiline = true;
+            this.txtbxCharRef2.Name = "txtbxCharRef2";
+            this.txtbxCharRef2.Size = new System.Drawing.Size(234, 156);
+            this.txtbxCharRef2.TabIndex = 39;
             // 
             // formResumeCreator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(552, 651);
+            this.AutoScroll = true;
+            this.ClientSize = new System.Drawing.Size(890, 749);
+            this.Controls.Add(this.txtbxCharRef2);
+            this.Controls.Add(this.txtbxCharRef1);
             this.Controls.Add(this.lblCharRef);
             this.Controls.Add(this.txtbxCharRef);
             this.Controls.Add(this.lblSkills);
@@ -231,6 +252,8 @@
         private System.Windows.Forms.TextBox txtbxSkills;
         private System.Windows.Forms.Label lblCharRef;
         private System.Windows.Forms.TextBox txtbxCharRef;
+        private System.Windows.Forms.TextBox txtbxCharRef1;
+        private System.Windows.Forms.TextBox txtbxCharRef2;
     }
 }
 

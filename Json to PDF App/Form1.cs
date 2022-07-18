@@ -95,49 +95,20 @@ namespace Json_to_PDF_App
             var Json_Path = @"C:\Users\Carl Joseph\source\repos\Json to PDF App\Json to PDF App\Resume\Resume.json";
             String Json_Content = File.ReadAllText(Json_Path);
             Resume_Content Resume = JsonConvert.DeserializeObject<Resume_Content>(Json_Content);
-            MessageBox.Show(Resume.Name);
-            MessageBox.Show(Resume.Position);
-            MessageBox.Show(Resume.Objective);
-            MessageBox.Show(Resume.ContactNo);
-            MessageBox.Show(Resume.EmailAddress);
-            MessageBox.Show(Resume.Address);
-            MessageBox.Show(Resume.Facebook);
-            MessageBox.Show(Resume.School);
-            MessageBox.Show(Resume.SchoolAddress);
-            MessageBox.Show(Resume.SchoolYear);
-            MessageBox.Show(Resume.School1);
-            MessageBox.Show(Resume.Strand);
-            MessageBox.Show(Resume.SchoolAddress1);
-            MessageBox.Show(Resume.SchoolYear1);
-            MessageBox.Show(Resume.School2);
-            MessageBox.Show(Resume.SchoolAddress2);
-            MessageBox.Show(Resume.SchoolYear2);
-            MessageBox.Show(Resume.School3);
-            MessageBox.Show(Resume.SchoolAddress3);
-            MessageBox.Show(Resume.SchoolYear3);
-            MessageBox.Show(Resume.School4);
-            MessageBox.Show(Resume.SchoolAddress4);
-            MessageBox.Show(Resume.SchoolYear4);
-            MessageBox.Show(Resume.Skill1);
-            MessageBox.Show(Resume.Skill2);
-            MessageBox.Show(Resume.Skill3);
-            MessageBox.Show(Resume.Skill4);
-            MessageBox.Show(Resume.Skill5);
-            MessageBox.Show(Resume.Skill6);
-            MessageBox.Show(Resume.GithubAccountLink);
-            MessageBox.Show(Resume.CharacterReferenceName);
-            MessageBox.Show(Resume.CharacterReferenceCompany);
-            MessageBox.Show(Resume.CharacterReferencePosition);
-            MessageBox.Show(Resume.CharacterReferenceMobile);
-            MessageBox.Show(Resume.CharacterReferenceName1);
-            MessageBox.Show(Resume.CharacterReferenceCompany1);
-            MessageBox.Show(Resume.CharacterReferencePosition1);
-            MessageBox.Show(Resume.CharacterReferenceMobile1);
-            MessageBox.Show(Resume.CharacterReferenceName2);
-            MessageBox.Show(Resume.CharacterReferenceCompany2);
-            MessageBox.Show(Resume.CharacterReferencePosition2);
-            MessageBox.Show(Resume.CharacterReferenceMobile2);
 
+            txtbxName.Text = Resume.Name;
+            txtbxPosition.Text = Resume.Position;
+            txtbxObjective.Text = Resume.Objective;
+            txtbxContact.Text = Resume.ContactNo + "\r\n" + Resume.EmailAddress + "\r\n" + Resume.Address + "\r\n" + Resume.Facebook;
+            txtbxEducation.Text = Resume.School + "\r\n" + Resume.Course + "\r\n" + Resume.SchoolAddress + "\r\n" + Resume.SchoolYear + "\r\n" + "\r\n" +
+                                Resume.School1 + "\r\n" + Resume.Strand + "\r\n" + Resume.SchoolAddress1 + "\r\n" + Resume.SchoolYear1 + "\r\n" + "\r\n" +
+                                Resume.School2 + "\r\n" + Resume.SchoolAddress2 + "\r\n" + Resume.SchoolYear2 + "\r\n" + "\r\n" +
+                                Resume.School3 + "\r\n" + Resume.SchoolAddress3 + "\r\n" + Resume.SchoolYear3 + "\r\n" + "\r\n" +
+                                Resume.School4 + "\r\n" + Resume.SchoolAddress4 + "\r\n" + Resume.SchoolYear4;
+            txtbxSkills.Text = Resume.Skill1 + "\r\n" + Resume.Skill2 + "\r\n" + Resume.Skill3 + "\r\n" + Resume.Skill4 + "\r\n" + Resume.Skill5 + "\r\n" + Resume.Skill6 + "\r\n" + "\r\n" + Resume.GithubAccountLink;
+            txtbxCharRef.Text = Resume.CharacterReferenceName + "\r\n" + Resume.CharacterReferenceCompany + "\r\n" + Resume.CharacterReferencePosition + "\r\n" + Resume.CharacterReferenceMobile;
+            txtbxCharRef1.Text = Resume.CharacterReferenceName1 + "\r\n" + Resume.CharacterReferenceCompany1 + "\r\n" + Resume.CharacterReferencePosition1 + "\r\n" + Resume.CharacterReferenceMobile1;
+            txtbxCharRef2.Text = Resume.CharacterReferenceName2 + "\r\n" + Resume.CharacterReferenceCompany2 + "\r\n" + Resume.CharacterReferencePosition2 + "\r\n" + Resume.CharacterReferenceMobile2;
 
 
         }
