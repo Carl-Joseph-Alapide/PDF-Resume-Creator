@@ -29,97 +29,23 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(formResumeCreator));
-            this.txtbxJSON = new System.Windows.Forms.TextBox();
-            this.BtnJson = new System.Windows.Forms.Button();
-            this.txtbxFullName = new System.Windows.Forms.TextBox();
-            this.txtbxMobile = new System.Windows.Forms.TextBox();
-            this.txtbxAddress = new System.Windows.Forms.TextBox();
-            this.lblFullName = new System.Windows.Forms.Label();
-            this.lblMobile = new System.Windows.Forms.Label();
-            this.lblAddress = new System.Windows.Forms.Label();
             this.lblHeader = new System.Windows.Forms.Label();
-            this.txtbxEmail = new System.Windows.Forms.TextBox();
-            this.lblEmail = new System.Windows.Forms.Label();
-            this.lblFacebook = new System.Windows.Forms.Label();
-            this.txtbxFacebook = new System.Windows.Forms.TextBox();
-            this.lblBirthday = new System.Windows.Forms.Label();
-            this.txtbxBirthday = new System.Windows.Forms.TextBox();
+            this.btnRead = new System.Windows.Forms.Button();
+            this.txtbxName = new System.Windows.Forms.TextBox();
+            this.lblName = new System.Windows.Forms.Label();
+            this.lblPosition = new System.Windows.Forms.Label();
+            this.txtbxPosition = new System.Windows.Forms.TextBox();
+            this.lblObjective = new System.Windows.Forms.Label();
+            this.txtbxObjective = new System.Windows.Forms.TextBox();
+            this.lblContact = new System.Windows.Forms.Label();
+            this.txtbxContact = new System.Windows.Forms.TextBox();
             this.lblEducation = new System.Windows.Forms.Label();
             this.txtbxEducation = new System.Windows.Forms.TextBox();
-            this.txtbxSkills = new System.Windows.Forms.TextBox();
             this.lblSkills = new System.Windows.Forms.Label();
-            this.txtbxWork = new System.Windows.Forms.TextBox();
-            this.lblWork = new System.Windows.Forms.Label();
-            this.TxtbxCharacterREf = new System.Windows.Forms.TextBox();
-            this.lblCharacterRef = new System.Windows.Forms.Label();
-            this.btnRead = new System.Windows.Forms.Button();
+            this.txtbxSkills = new System.Windows.Forms.TextBox();
+            this.lblCharRef = new System.Windows.Forms.Label();
+            this.txtbxCharRef = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
-            // 
-            // txtbxJSON
-            // 
-            this.txtbxJSON.Location = new System.Drawing.Point(572, 68);
-            this.txtbxJSON.Multiline = true;
-            this.txtbxJSON.Name = "txtbxJSON";
-            this.txtbxJSON.Size = new System.Drawing.Size(183, 45);
-            this.txtbxJSON.TabIndex = 0;
-            // 
-            // BtnJson
-            // 
-            this.BtnJson.Location = new System.Drawing.Point(602, 139);
-            this.BtnJson.Name = "BtnJson";
-            this.BtnJson.Size = new System.Drawing.Size(125, 23);
-            this.BtnJson.TabIndex = 1;
-            this.BtnJson.Text = "Convert to JSON";
-            this.BtnJson.UseVisualStyleBackColor = true;
-            this.BtnJson.Click += new System.EventHandler(this.BtnJson_Click);
-            // 
-            // txtbxFullName
-            // 
-            this.txtbxFullName.Location = new System.Drawing.Point(35, 84);
-            this.txtbxFullName.Name = "txtbxFullName";
-            this.txtbxFullName.Size = new System.Drawing.Size(276, 20);
-            this.txtbxFullName.TabIndex = 2;
-            // 
-            // txtbxMobile
-            // 
-            this.txtbxMobile.Location = new System.Drawing.Point(35, 181);
-            this.txtbxMobile.Name = "txtbxMobile";
-            this.txtbxMobile.Size = new System.Drawing.Size(154, 20);
-            this.txtbxMobile.TabIndex = 3;
-            // 
-            // txtbxAddress
-            // 
-            this.txtbxAddress.Location = new System.Drawing.Point(35, 129);
-            this.txtbxAddress.Name = "txtbxAddress";
-            this.txtbxAddress.Size = new System.Drawing.Size(465, 20);
-            this.txtbxAddress.TabIndex = 4;
-            // 
-            // lblFullName
-            // 
-            this.lblFullName.AutoSize = true;
-            this.lblFullName.Location = new System.Drawing.Point(32, 68);
-            this.lblFullName.Name = "lblFullName";
-            this.lblFullName.Size = new System.Drawing.Size(54, 13);
-            this.lblFullName.TabIndex = 5;
-            this.lblFullName.Text = "Full Name";
-            // 
-            // lblMobile
-            // 
-            this.lblMobile.AutoSize = true;
-            this.lblMobile.Location = new System.Drawing.Point(32, 165);
-            this.lblMobile.Name = "lblMobile";
-            this.lblMobile.Size = new System.Drawing.Size(78, 13);
-            this.lblMobile.TabIndex = 6;
-            this.lblMobile.Text = "Mobile Number";
-            // 
-            // lblAddress
-            // 
-            this.lblAddress.AutoSize = true;
-            this.lblAddress.Location = new System.Drawing.Point(32, 113);
-            this.lblAddress.Name = "lblAddress";
-            this.lblAddress.Size = new System.Drawing.Size(45, 13);
-            this.lblAddress.TabIndex = 7;
-            this.lblAddress.Text = "Address";
             // 
             // lblHeader
             // 
@@ -131,162 +57,154 @@
             this.lblHeader.TabIndex = 8;
             this.lblHeader.Text = "Create your own Resume";
             // 
-            // txtbxEmail
+            // btnRead
             // 
-            this.txtbxEmail.Location = new System.Drawing.Point(195, 181);
-            this.txtbxEmail.Name = "txtbxEmail";
-            this.txtbxEmail.Size = new System.Drawing.Size(139, 20);
-            this.txtbxEmail.TabIndex = 9;
+            this.btnRead.Location = new System.Drawing.Point(198, 580);
+            this.btnRead.Name = "btnRead";
+            this.btnRead.Size = new System.Drawing.Size(117, 47);
+            this.btnRead.TabIndex = 23;
+            this.btnRead.Text = "Read";
+            this.btnRead.UseVisualStyleBackColor = true;
+            this.btnRead.Click += new System.EventHandler(this.btnRead_Click);
             // 
-            // lblEmail
+            // txtbxName
             // 
-            this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(195, 165);
-            this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(32, 13);
-            this.lblEmail.TabIndex = 10;
-            this.lblEmail.Text = "Email";
+            this.txtbxName.Location = new System.Drawing.Point(37, 83);
+            this.txtbxName.Name = "txtbxName";
+            this.txtbxName.Size = new System.Drawing.Size(228, 20);
+            this.txtbxName.TabIndex = 24;
             // 
-            // lblFacebook
+            // lblName
             // 
-            this.lblFacebook.AutoSize = true;
-            this.lblFacebook.Location = new System.Drawing.Point(337, 165);
-            this.lblFacebook.Name = "lblFacebook";
-            this.lblFacebook.Size = new System.Drawing.Size(55, 13);
-            this.lblFacebook.TabIndex = 12;
-            this.lblFacebook.Text = "Facebook";
+            this.lblName.AutoSize = true;
+            this.lblName.Location = new System.Drawing.Point(34, 67);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(38, 13);
+            this.lblName.TabIndex = 25;
+            this.lblName.Text = "Name:";
             // 
-            // txtbxFacebook
+            // lblPosition
             // 
-            this.txtbxFacebook.Location = new System.Drawing.Point(340, 181);
-            this.txtbxFacebook.Name = "txtbxFacebook";
-            this.txtbxFacebook.Size = new System.Drawing.Size(160, 20);
-            this.txtbxFacebook.TabIndex = 11;
+            this.lblPosition.AutoSize = true;
+            this.lblPosition.Location = new System.Drawing.Point(268, 67);
+            this.lblPosition.Name = "lblPosition";
+            this.lblPosition.Size = new System.Drawing.Size(47, 13);
+            this.lblPosition.TabIndex = 27;
+            this.lblPosition.Text = "Position:";
             // 
-            // lblBirthday
+            // txtbxPosition
             // 
-            this.lblBirthday.AutoSize = true;
-            this.lblBirthday.Location = new System.Drawing.Point(317, 68);
-            this.lblBirthday.Name = "lblBirthday";
-            this.lblBirthday.Size = new System.Drawing.Size(45, 13);
-            this.lblBirthday.TabIndex = 14;
-            this.lblBirthday.Text = "Birthday";
+            this.txtbxPosition.Location = new System.Drawing.Point(271, 83);
+            this.txtbxPosition.Name = "txtbxPosition";
+            this.txtbxPosition.Size = new System.Drawing.Size(228, 20);
+            this.txtbxPosition.TabIndex = 26;
             // 
-            // txtbxBirthday
+            // lblObjective
             // 
-            this.txtbxBirthday.Location = new System.Drawing.Point(317, 84);
-            this.txtbxBirthday.Name = "txtbxBirthday";
-            this.txtbxBirthday.Size = new System.Drawing.Size(183, 20);
-            this.txtbxBirthday.TabIndex = 13;
+            this.lblObjective.AutoSize = true;
+            this.lblObjective.Location = new System.Drawing.Point(34, 114);
+            this.lblObjective.Name = "lblObjective";
+            this.lblObjective.Size = new System.Drawing.Size(55, 13);
+            this.lblObjective.TabIndex = 29;
+            this.lblObjective.Text = "Objective:";
+            // 
+            // txtbxObjective
+            // 
+            this.txtbxObjective.Location = new System.Drawing.Point(37, 130);
+            this.txtbxObjective.Multiline = true;
+            this.txtbxObjective.Name = "txtbxObjective";
+            this.txtbxObjective.Size = new System.Drawing.Size(462, 61);
+            this.txtbxObjective.TabIndex = 28;
+            // 
+            // lblContact
+            // 
+            this.lblContact.AutoSize = true;
+            this.lblContact.Location = new System.Drawing.Point(34, 203);
+            this.lblContact.Name = "lblContact";
+            this.lblContact.Size = new System.Drawing.Size(79, 13);
+            this.lblContact.TabIndex = 31;
+            this.lblContact.Text = "Contact Details";
+            // 
+            // txtbxContact
+            // 
+            this.txtbxContact.Location = new System.Drawing.Point(37, 219);
+            this.txtbxContact.Multiline = true;
+            this.txtbxContact.Name = "txtbxContact";
+            this.txtbxContact.Size = new System.Drawing.Size(462, 61);
+            this.txtbxContact.TabIndex = 30;
             // 
             // lblEducation
             // 
             this.lblEducation.AutoSize = true;
-            this.lblEducation.Location = new System.Drawing.Point(32, 231);
+            this.lblEducation.Location = new System.Drawing.Point(34, 295);
             this.lblEducation.Name = "lblEducation";
-            this.lblEducation.Size = new System.Drawing.Size(116, 13);
-            this.lblEducation.TabIndex = 15;
-            this.lblEducation.Text = "Educational Attainment";
+            this.lblEducation.Size = new System.Drawing.Size(124, 13);
+            this.lblEducation.TabIndex = 33;
+            this.lblEducation.Text = "Educational Background";
             // 
             // txtbxEducation
             // 
-            this.txtbxEducation.Location = new System.Drawing.Point(35, 247);
+            this.txtbxEducation.Location = new System.Drawing.Point(37, 311);
             this.txtbxEducation.Multiline = true;
             this.txtbxEducation.Name = "txtbxEducation";
-            this.txtbxEducation.Size = new System.Drawing.Size(465, 54);
-            this.txtbxEducation.TabIndex = 16;
-            // 
-            // txtbxSkills
-            // 
-            this.txtbxSkills.Location = new System.Drawing.Point(35, 339);
-            this.txtbxSkills.Multiline = true;
-            this.txtbxSkills.Name = "txtbxSkills";
-            this.txtbxSkills.Size = new System.Drawing.Size(465, 54);
-            this.txtbxSkills.TabIndex = 18;
+            this.txtbxEducation.Size = new System.Drawing.Size(462, 61);
+            this.txtbxEducation.TabIndex = 32;
             // 
             // lblSkills
             // 
             this.lblSkills.AutoSize = true;
-            this.lblSkills.Location = new System.Drawing.Point(32, 323);
+            this.lblSkills.Location = new System.Drawing.Point(34, 383);
             this.lblSkills.Name = "lblSkills";
             this.lblSkills.Size = new System.Drawing.Size(31, 13);
-            this.lblSkills.TabIndex = 17;
+            this.lblSkills.TabIndex = 35;
             this.lblSkills.Text = "Skills";
             // 
-            // txtbxWork
+            // txtbxSkills
             // 
-            this.txtbxWork.Location = new System.Drawing.Point(35, 425);
-            this.txtbxWork.Multiline = true;
-            this.txtbxWork.Name = "txtbxWork";
-            this.txtbxWork.Size = new System.Drawing.Size(465, 54);
-            this.txtbxWork.TabIndex = 20;
+            this.txtbxSkills.Location = new System.Drawing.Point(37, 399);
+            this.txtbxSkills.Multiline = true;
+            this.txtbxSkills.Name = "txtbxSkills";
+            this.txtbxSkills.Size = new System.Drawing.Size(462, 61);
+            this.txtbxSkills.TabIndex = 34;
             // 
-            // lblWork
+            // lblCharRef
             // 
-            this.lblWork.AutoSize = true;
-            this.lblWork.Location = new System.Drawing.Point(32, 409);
-            this.lblWork.Name = "lblWork";
-            this.lblWork.Size = new System.Drawing.Size(89, 13);
-            this.lblWork.TabIndex = 19;
-            this.lblWork.Text = "Work Experience";
+            this.lblCharRef.AutoSize = true;
+            this.lblCharRef.Location = new System.Drawing.Point(34, 470);
+            this.lblCharRef.Name = "lblCharRef";
+            this.lblCharRef.Size = new System.Drawing.Size(106, 13);
+            this.lblCharRef.TabIndex = 37;
+            this.lblCharRef.Text = "Character Reference";
             // 
-            // TxtbxCharacterREf
+            // txtbxCharRef
             // 
-            this.TxtbxCharacterREf.Location = new System.Drawing.Point(35, 507);
-            this.TxtbxCharacterREf.Multiline = true;
-            this.TxtbxCharacterREf.Name = "TxtbxCharacterREf";
-            this.TxtbxCharacterREf.Size = new System.Drawing.Size(465, 54);
-            this.TxtbxCharacterREf.TabIndex = 22;
-            // 
-            // lblCharacterRef
-            // 
-            this.lblCharacterRef.AutoSize = true;
-            this.lblCharacterRef.Location = new System.Drawing.Point(32, 491);
-            this.lblCharacterRef.Name = "lblCharacterRef";
-            this.lblCharacterRef.Size = new System.Drawing.Size(106, 13);
-            this.lblCharacterRef.TabIndex = 21;
-            this.lblCharacterRef.Text = "Character Reference";
-            this.lblCharacterRef.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // btnRead
-            // 
-            this.btnRead.Location = new System.Drawing.Point(614, 277);
-            this.btnRead.Name = "btnRead";
-            this.btnRead.Size = new System.Drawing.Size(75, 23);
-            this.btnRead.TabIndex = 23;
-            this.btnRead.Text = "Read Json";
-            this.btnRead.UseVisualStyleBackColor = true;
-            this.btnRead.Click += new System.EventHandler(this.btnRead_Click);
+            this.txtbxCharRef.Location = new System.Drawing.Point(37, 486);
+            this.txtbxCharRef.Multiline = true;
+            this.txtbxCharRef.Name = "txtbxCharRef";
+            this.txtbxCharRef.Size = new System.Drawing.Size(462, 61);
+            this.txtbxCharRef.TabIndex = 36;
             // 
             // formResumeCreator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 601);
-            this.Controls.Add(this.btnRead);
-            this.Controls.Add(this.TxtbxCharacterREf);
-            this.Controls.Add(this.lblCharacterRef);
-            this.Controls.Add(this.txtbxWork);
-            this.Controls.Add(this.lblWork);
-            this.Controls.Add(this.txtbxSkills);
+            this.ClientSize = new System.Drawing.Size(552, 651);
+            this.Controls.Add(this.lblCharRef);
+            this.Controls.Add(this.txtbxCharRef);
             this.Controls.Add(this.lblSkills);
-            this.Controls.Add(this.txtbxEducation);
+            this.Controls.Add(this.txtbxSkills);
             this.Controls.Add(this.lblEducation);
-            this.Controls.Add(this.lblBirthday);
-            this.Controls.Add(this.txtbxBirthday);
-            this.Controls.Add(this.lblFacebook);
-            this.Controls.Add(this.txtbxFacebook);
-            this.Controls.Add(this.lblEmail);
-            this.Controls.Add(this.txtbxEmail);
+            this.Controls.Add(this.txtbxEducation);
+            this.Controls.Add(this.lblContact);
+            this.Controls.Add(this.txtbxContact);
+            this.Controls.Add(this.lblObjective);
+            this.Controls.Add(this.txtbxObjective);
+            this.Controls.Add(this.lblPosition);
+            this.Controls.Add(this.txtbxPosition);
+            this.Controls.Add(this.lblName);
+            this.Controls.Add(this.txtbxName);
+            this.Controls.Add(this.btnRead);
             this.Controls.Add(this.lblHeader);
-            this.Controls.Add(this.lblAddress);
-            this.Controls.Add(this.lblMobile);
-            this.Controls.Add(this.lblFullName);
-            this.Controls.Add(this.txtbxAddress);
-            this.Controls.Add(this.txtbxMobile);
-            this.Controls.Add(this.txtbxFullName);
-            this.Controls.Add(this.BtnJson);
-            this.Controls.Add(this.txtbxJSON);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "formResumeCreator";
             this.Text = "Resumake  - Free Resume Maker";
@@ -297,31 +215,22 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox txtbxJSON;
-        private System.Windows.Forms.Button BtnJson;
-        private System.Windows.Forms.TextBox txtbxFullName;
-        private System.Windows.Forms.TextBox txtbxMobile;
-        private System.Windows.Forms.TextBox txtbxAddress;
-        private System.Windows.Forms.Label lblFullName;
-        private System.Windows.Forms.Label lblMobile;
-        private System.Windows.Forms.Label lblAddress;
         private System.Windows.Forms.Label lblHeader;
-        private System.Windows.Forms.TextBox txtbxEmail;
-        private System.Windows.Forms.Label lblEmail;
-        private System.Windows.Forms.Label lblFacebook;
-        private System.Windows.Forms.TextBox txtbxFacebook;
-        private System.Windows.Forms.Label lblBirthday;
-        private System.Windows.Forms.TextBox txtbxBirthday;
+        private System.Windows.Forms.Button btnRead;
+        private System.Windows.Forms.TextBox txtbxName;
+        private System.Windows.Forms.Label lblName;
+        private System.Windows.Forms.Label lblPosition;
+        private System.Windows.Forms.TextBox txtbxPosition;
+        private System.Windows.Forms.Label lblObjective;
+        private System.Windows.Forms.TextBox txtbxObjective;
+        private System.Windows.Forms.Label lblContact;
+        private System.Windows.Forms.TextBox txtbxContact;
         private System.Windows.Forms.Label lblEducation;
         private System.Windows.Forms.TextBox txtbxEducation;
-        private System.Windows.Forms.TextBox txtbxSkills;
         private System.Windows.Forms.Label lblSkills;
-        private System.Windows.Forms.TextBox txtbxWork;
-        private System.Windows.Forms.Label lblWork;
-        private System.Windows.Forms.TextBox TxtbxCharacterREf;
-        private System.Windows.Forms.Label lblCharacterRef;
-        private System.Windows.Forms.Button btnRead;
+        private System.Windows.Forms.TextBox txtbxSkills;
+        private System.Windows.Forms.Label lblCharRef;
+        private System.Windows.Forms.TextBox txtbxCharRef;
     }
 }
 
