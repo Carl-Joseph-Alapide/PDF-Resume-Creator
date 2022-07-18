@@ -47,6 +47,8 @@
             this.txtbxCharRef = new System.Windows.Forms.TextBox();
             this.txtbxCharRef1 = new System.Windows.Forms.TextBox();
             this.txtbxCharRef2 = new System.Windows.Forms.TextBox();
+            this.lblSearch = new System.Windows.Forms.Label();
+            this.txtbxSearch = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lblHeader
@@ -61,17 +63,17 @@
             // 
             // btnRead
             // 
-            this.btnRead.Location = new System.Drawing.Point(361, 682);
+            this.btnRead.Location = new System.Drawing.Point(591, 68);
             this.btnRead.Name = "btnRead";
             this.btnRead.Size = new System.Drawing.Size(117, 47);
             this.btnRead.TabIndex = 23;
-            this.btnRead.Text = "Read";
+            this.btnRead.Text = "Deserialize";
             this.btnRead.UseVisualStyleBackColor = true;
             this.btnRead.Click += new System.EventHandler(this.btnRead_Click);
             // 
             // txtbxName
             // 
-            this.txtbxName.Location = new System.Drawing.Point(37, 83);
+            this.txtbxName.Location = new System.Drawing.Point(31, 150);
             this.txtbxName.Name = "txtbxName";
             this.txtbxName.Size = new System.Drawing.Size(302, 20);
             this.txtbxName.TabIndex = 24;
@@ -79,7 +81,7 @@
             // lblName
             // 
             this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(34, 67);
+            this.lblName.Location = new System.Drawing.Point(28, 134);
             this.lblName.Name = "lblName";
             this.lblName.Size = new System.Drawing.Size(38, 13);
             this.lblName.TabIndex = 25;
@@ -88,7 +90,7 @@
             // lblPosition
             // 
             this.lblPosition.AutoSize = true;
-            this.lblPosition.Location = new System.Drawing.Point(34, 110);
+            this.lblPosition.Location = new System.Drawing.Point(28, 177);
             this.lblPosition.Name = "lblPosition";
             this.lblPosition.Size = new System.Drawing.Size(47, 13);
             this.lblPosition.TabIndex = 27;
@@ -96,7 +98,7 @@
             // 
             // txtbxPosition
             // 
-            this.txtbxPosition.Location = new System.Drawing.Point(37, 126);
+            this.txtbxPosition.Location = new System.Drawing.Point(31, 193);
             this.txtbxPosition.Name = "txtbxPosition";
             this.txtbxPosition.Size = new System.Drawing.Size(302, 20);
             this.txtbxPosition.TabIndex = 26;
@@ -104,7 +106,7 @@
             // lblObjective
             // 
             this.lblObjective.AutoSize = true;
-            this.lblObjective.Location = new System.Drawing.Point(355, 69);
+            this.lblObjective.Location = new System.Drawing.Point(349, 136);
             this.lblObjective.Name = "lblObjective";
             this.lblObjective.Size = new System.Drawing.Size(55, 13);
             this.lblObjective.TabIndex = 29;
@@ -112,16 +114,16 @@
             // 
             // txtbxObjective
             // 
-            this.txtbxObjective.Location = new System.Drawing.Point(358, 85);
+            this.txtbxObjective.Location = new System.Drawing.Point(352, 152);
             this.txtbxObjective.Multiline = true;
             this.txtbxObjective.Name = "txtbxObjective";
-            this.txtbxObjective.Size = new System.Drawing.Size(433, 61);
+            this.txtbxObjective.Size = new System.Drawing.Size(437, 61);
             this.txtbxObjective.TabIndex = 28;
             // 
             // lblContact
             // 
             this.lblContact.AutoSize = true;
-            this.lblContact.Location = new System.Drawing.Point(30, 339);
+            this.lblContact.Location = new System.Drawing.Point(28, 407);
             this.lblContact.Name = "lblContact";
             this.lblContact.Size = new System.Drawing.Size(79, 13);
             this.lblContact.TabIndex = 31;
@@ -129,7 +131,7 @@
             // 
             // txtbxContact
             // 
-            this.txtbxContact.Location = new System.Drawing.Point(33, 355);
+            this.txtbxContact.Location = new System.Drawing.Point(31, 423);
             this.txtbxContact.Multiline = true;
             this.txtbxContact.Name = "txtbxContact";
             this.txtbxContact.Size = new System.Drawing.Size(306, 129);
@@ -138,7 +140,7 @@
             // lblEducation
             // 
             this.lblEducation.AutoSize = true;
-            this.lblEducation.Location = new System.Drawing.Point(351, 163);
+            this.lblEducation.Location = new System.Drawing.Point(349, 231);
             this.lblEducation.Name = "lblEducation";
             this.lblEducation.Size = new System.Drawing.Size(124, 13);
             this.lblEducation.TabIndex = 33;
@@ -146,7 +148,7 @@
             // 
             // txtbxEducation
             // 
-            this.txtbxEducation.Location = new System.Drawing.Point(354, 179);
+            this.txtbxEducation.Location = new System.Drawing.Point(352, 247);
             this.txtbxEducation.Multiline = true;
             this.txtbxEducation.Name = "txtbxEducation";
             this.txtbxEducation.Size = new System.Drawing.Size(437, 305);
@@ -155,7 +157,7 @@
             // lblSkills
             // 
             this.lblSkills.AutoSize = true;
-            this.lblSkills.Location = new System.Drawing.Point(34, 163);
+            this.lblSkills.Location = new System.Drawing.Point(32, 231);
             this.lblSkills.Name = "lblSkills";
             this.lblSkills.Size = new System.Drawing.Size(31, 13);
             this.lblSkills.TabIndex = 35;
@@ -163,7 +165,7 @@
             // 
             // txtbxSkills
             // 
-            this.txtbxSkills.Location = new System.Drawing.Point(33, 179);
+            this.txtbxSkills.Location = new System.Drawing.Point(31, 247);
             this.txtbxSkills.Multiline = true;
             this.txtbxSkills.Name = "txtbxSkills";
             this.txtbxSkills.Size = new System.Drawing.Size(306, 147);
@@ -172,7 +174,7 @@
             // lblCharRef
             // 
             this.lblCharRef.AutoSize = true;
-            this.lblCharRef.Location = new System.Drawing.Point(30, 487);
+            this.lblCharRef.Location = new System.Drawing.Point(28, 565);
             this.lblCharRef.Name = "lblCharRef";
             this.lblCharRef.Size = new System.Drawing.Size(106, 13);
             this.lblCharRef.TabIndex = 37;
@@ -180,27 +182,44 @@
             // 
             // txtbxCharRef
             // 
-            this.txtbxCharRef.Location = new System.Drawing.Point(33, 503);
+            this.txtbxCharRef.Location = new System.Drawing.Point(31, 581);
             this.txtbxCharRef.Multiline = true;
             this.txtbxCharRef.Name = "txtbxCharRef";
-            this.txtbxCharRef.Size = new System.Drawing.Size(234, 156);
+            this.txtbxCharRef.Size = new System.Drawing.Size(234, 113);
             this.txtbxCharRef.TabIndex = 36;
             // 
             // txtbxCharRef1
             // 
-            this.txtbxCharRef1.Location = new System.Drawing.Point(293, 503);
+            this.txtbxCharRef1.Location = new System.Drawing.Point(291, 581);
             this.txtbxCharRef1.Multiline = true;
             this.txtbxCharRef1.Name = "txtbxCharRef1";
-            this.txtbxCharRef1.Size = new System.Drawing.Size(234, 156);
+            this.txtbxCharRef1.Size = new System.Drawing.Size(234, 113);
             this.txtbxCharRef1.TabIndex = 38;
             // 
             // txtbxCharRef2
             // 
-            this.txtbxCharRef2.Location = new System.Drawing.Point(557, 503);
+            this.txtbxCharRef2.Location = new System.Drawing.Point(555, 581);
             this.txtbxCharRef2.Multiline = true;
             this.txtbxCharRef2.Name = "txtbxCharRef2";
-            this.txtbxCharRef2.Size = new System.Drawing.Size(234, 156);
+            this.txtbxCharRef2.Size = new System.Drawing.Size(234, 113);
             this.txtbxCharRef2.TabIndex = 39;
+            // 
+            // lblSearch
+            // 
+            this.lblSearch.AutoSize = true;
+            this.lblSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblSearch.Location = new System.Drawing.Point(33, 82);
+            this.lblSearch.Name = "lblSearch";
+            this.lblSearch.Size = new System.Drawing.Size(217, 16);
+            this.lblSearch.TabIndex = 40;
+            this.lblSearch.Text = "Input the File name of the Json";
+            // 
+            // txtbxSearch
+            // 
+            this.txtbxSearch.Location = new System.Drawing.Point(256, 82);
+            this.txtbxSearch.Name = "txtbxSearch";
+            this.txtbxSearch.Size = new System.Drawing.Size(318, 20);
+            this.txtbxSearch.TabIndex = 41;
             // 
             // formResumeCreator
             // 
@@ -208,6 +227,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(890, 749);
+            this.Controls.Add(this.txtbxSearch);
+            this.Controls.Add(this.lblSearch);
             this.Controls.Add(this.txtbxCharRef2);
             this.Controls.Add(this.txtbxCharRef1);
             this.Controls.Add(this.lblCharRef);
@@ -254,6 +275,8 @@
         private System.Windows.Forms.TextBox txtbxCharRef;
         private System.Windows.Forms.TextBox txtbxCharRef1;
         private System.Windows.Forms.TextBox txtbxCharRef2;
+        private System.Windows.Forms.Label lblSearch;
+        private System.Windows.Forms.TextBox txtbxSearch;
     }
 }
 
