@@ -131,7 +131,19 @@ namespace Json_to_PDF_App
             PdfWriter PDF = PdfWriter.GetInstance(Docs, new FileStream(@"C:\Users\Carl Joseph\source\repos\Json to PDF App\Json to PDF App\Resume\Alapide, Carl Joseph.pdf", FileMode.Create));
             Docs.Open();
 
+            iTextSharp.text.Image Photo = iTextSharp.text.Image.GetInstance(@"C:\Users\Carl Joseph\source\repos\Json to PDF App\Json to PDF App\Resume\"+ txtbxPhoto.Text);
+            Photo.ScalePercent(30f);
+            Photo.SetAbsolutePosition(Docs.PageSize.Width - 20f - 180f, Docs.PageSize.Height - 36f - 150.6f);
+            Photo.Border = iTextSharp.text.Rectangle.BOX;
+            Photo.BorderColor = iTextSharp.text.BaseColor.BLACK;
+            Photo.BorderWidth = 2f;
+            Docs.Add(Photo);
+
             Paragraph Name = new Paragraph(txtbxName.Text);
+            Paragraph Position = new Paragraph(txtbxPosition.Text);
+            Paragraph objective = new Paragraph(txtbxObjective.Text);
+            Paragraph Skills = new Paragraph(txtbxSkills.Text);
+            Name.Font.Size = 30f;
             Docs.Add(Name);
             Docs.Close();
         }

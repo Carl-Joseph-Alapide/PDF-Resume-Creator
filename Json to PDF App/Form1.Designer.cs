@@ -50,6 +50,9 @@
             this.lblSearch = new System.Windows.Forms.Label();
             this.txtbxSearch = new System.Windows.Forms.TextBox();
             this.btnPDF = new System.Windows.Forms.Button();
+            this.lblPhoto = new System.Windows.Forms.Label();
+            this.lblPhotoAdd = new System.Windows.Forms.Label();
+            this.txtbxPhoto = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lblHeader
@@ -124,7 +127,7 @@
             // lblContact
             // 
             this.lblContact.AutoSize = true;
-            this.lblContact.Location = new System.Drawing.Point(28, 394);
+            this.lblContact.Location = new System.Drawing.Point(28, 437);
             this.lblContact.Name = "lblContact";
             this.lblContact.Size = new System.Drawing.Size(79, 13);
             this.lblContact.TabIndex = 31;
@@ -132,10 +135,10 @@
             // 
             // txtbxContact
             // 
-            this.txtbxContact.Location = new System.Drawing.Point(31, 410);
+            this.txtbxContact.Location = new System.Drawing.Point(31, 453);
             this.txtbxContact.Multiline = true;
             this.txtbxContact.Name = "txtbxContact";
-            this.txtbxContact.Size = new System.Drawing.Size(306, 132);
+            this.txtbxContact.Size = new System.Drawing.Size(306, 89);
             this.txtbxContact.TabIndex = 30;
             // 
             // lblEducation
@@ -158,7 +161,7 @@
             // lblSkills
             // 
             this.lblSkills.AutoSize = true;
-            this.lblSkills.Location = new System.Drawing.Point(32, 231);
+            this.lblSkills.Location = new System.Drawing.Point(32, 283);
             this.lblSkills.Name = "lblSkills";
             this.lblSkills.Size = new System.Drawing.Size(31, 13);
             this.lblSkills.TabIndex = 35;
@@ -166,7 +169,7 @@
             // 
             // txtbxSkills
             // 
-            this.txtbxSkills.Location = new System.Drawing.Point(31, 247);
+            this.txtbxSkills.Location = new System.Drawing.Point(31, 299);
             this.txtbxSkills.Multiline = true;
             this.txtbxSkills.Name = "txtbxSkills";
             this.txtbxSkills.Size = new System.Drawing.Size(306, 135);
@@ -232,12 +235,40 @@
             this.btnPDF.UseVisualStyleBackColor = true;
             this.btnPDF.Click += new System.EventHandler(this.btnPDF_Click);
             // 
+            // lblPhoto
+            // 
+            this.lblPhoto.AutoSize = true;
+            this.lblPhoto.Location = new System.Drawing.Point(28, 231);
+            this.lblPhoto.Name = "lblPhoto";
+            this.lblPhoto.Size = new System.Drawing.Size(38, 13);
+            this.lblPhoto.TabIndex = 43;
+            this.lblPhoto.Text = "Photo:";
+            // 
+            // lblPhotoAdd
+            // 
+            this.lblPhotoAdd.AutoSize = true;
+            this.lblPhotoAdd.Location = new System.Drawing.Point(28, 253);
+            this.lblPhotoAdd.Name = "lblPhotoAdd";
+            this.lblPhotoAdd.Size = new System.Drawing.Size(123, 13);
+            this.lblPhotoAdd.TabIndex = 44;
+            this.lblPhotoAdd.Text = "Add your Image filename";
+            // 
+            // txtbxPhoto
+            // 
+            this.txtbxPhoto.Location = new System.Drawing.Point(157, 250);
+            this.txtbxPhoto.Name = "txtbxPhoto";
+            this.txtbxPhoto.Size = new System.Drawing.Size(173, 20);
+            this.txtbxPhoto.TabIndex = 45;
+            // 
             // formResumeCreator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(890, 749);
+            this.Controls.Add(this.txtbxPhoto);
+            this.Controls.Add(this.lblPhotoAdd);
+            this.Controls.Add(this.lblPhoto);
             this.Controls.Add(this.btnPDF);
             this.Controls.Add(this.txtbxSearch);
             this.Controls.Add(this.lblSearch);
@@ -290,6 +321,9 @@
         private System.Windows.Forms.Label lblSearch;
         private System.Windows.Forms.TextBox txtbxSearch;
         private System.Windows.Forms.Button btnPDF;
+        private System.Windows.Forms.Label lblPhoto;
+        private System.Windows.Forms.Label lblPhotoAdd;
+        private System.Windows.Forms.TextBox txtbxPhoto;
     }
 }
 
