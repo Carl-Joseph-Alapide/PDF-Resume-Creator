@@ -49,6 +49,7 @@
             this.txtbxCharRef2 = new System.Windows.Forms.TextBox();
             this.lblSearch = new System.Windows.Forms.Label();
             this.txtbxSearch = new System.Windows.Forms.TextBox();
+            this.btnPDF = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblHeader
@@ -123,7 +124,7 @@
             // lblContact
             // 
             this.lblContact.AutoSize = true;
-            this.lblContact.Location = new System.Drawing.Point(28, 407);
+            this.lblContact.Location = new System.Drawing.Point(28, 394);
             this.lblContact.Name = "lblContact";
             this.lblContact.Size = new System.Drawing.Size(79, 13);
             this.lblContact.TabIndex = 31;
@@ -131,10 +132,10 @@
             // 
             // txtbxContact
             // 
-            this.txtbxContact.Location = new System.Drawing.Point(31, 423);
+            this.txtbxContact.Location = new System.Drawing.Point(31, 410);
             this.txtbxContact.Multiline = true;
             this.txtbxContact.Name = "txtbxContact";
-            this.txtbxContact.Size = new System.Drawing.Size(306, 129);
+            this.txtbxContact.Size = new System.Drawing.Size(306, 132);
             this.txtbxContact.TabIndex = 30;
             // 
             // lblEducation
@@ -151,7 +152,7 @@
             this.txtbxEducation.Location = new System.Drawing.Point(352, 247);
             this.txtbxEducation.Multiline = true;
             this.txtbxEducation.Name = "txtbxEducation";
-            this.txtbxEducation.Size = new System.Drawing.Size(437, 305);
+            this.txtbxEducation.Size = new System.Drawing.Size(437, 295);
             this.txtbxEducation.TabIndex = 32;
             // 
             // lblSkills
@@ -168,13 +169,13 @@
             this.txtbxSkills.Location = new System.Drawing.Point(31, 247);
             this.txtbxSkills.Multiline = true;
             this.txtbxSkills.Name = "txtbxSkills";
-            this.txtbxSkills.Size = new System.Drawing.Size(306, 147);
+            this.txtbxSkills.Size = new System.Drawing.Size(306, 135);
             this.txtbxSkills.TabIndex = 34;
             // 
             // lblCharRef
             // 
             this.lblCharRef.AutoSize = true;
-            this.lblCharRef.Location = new System.Drawing.Point(28, 565);
+            this.lblCharRef.Location = new System.Drawing.Point(28, 552);
             this.lblCharRef.Name = "lblCharRef";
             this.lblCharRef.Size = new System.Drawing.Size(106, 13);
             this.lblCharRef.TabIndex = 37;
@@ -182,7 +183,7 @@
             // 
             // txtbxCharRef
             // 
-            this.txtbxCharRef.Location = new System.Drawing.Point(31, 581);
+            this.txtbxCharRef.Location = new System.Drawing.Point(31, 568);
             this.txtbxCharRef.Multiline = true;
             this.txtbxCharRef.Name = "txtbxCharRef";
             this.txtbxCharRef.Size = new System.Drawing.Size(234, 113);
@@ -190,7 +191,7 @@
             // 
             // txtbxCharRef1
             // 
-            this.txtbxCharRef1.Location = new System.Drawing.Point(291, 581);
+            this.txtbxCharRef1.Location = new System.Drawing.Point(291, 568);
             this.txtbxCharRef1.Multiline = true;
             this.txtbxCharRef1.Name = "txtbxCharRef1";
             this.txtbxCharRef1.Size = new System.Drawing.Size(234, 113);
@@ -198,7 +199,7 @@
             // 
             // txtbxCharRef2
             // 
-            this.txtbxCharRef2.Location = new System.Drawing.Point(555, 581);
+            this.txtbxCharRef2.Location = new System.Drawing.Point(555, 568);
             this.txtbxCharRef2.Multiline = true;
             this.txtbxCharRef2.Name = "txtbxCharRef2";
             this.txtbxCharRef2.Size = new System.Drawing.Size(234, 113);
@@ -221,12 +222,23 @@
             this.txtbxSearch.Size = new System.Drawing.Size(318, 20);
             this.txtbxSearch.TabIndex = 41;
             // 
+            // btnPDF
+            // 
+            this.btnPDF.Location = new System.Drawing.Point(346, 696);
+            this.btnPDF.Name = "btnPDF";
+            this.btnPDF.Size = new System.Drawing.Size(127, 50);
+            this.btnPDF.TabIndex = 42;
+            this.btnPDF.Text = "Create PDF";
+            this.btnPDF.UseVisualStyleBackColor = true;
+            this.btnPDF.Click += new System.EventHandler(this.btnPDF_Click);
+            // 
             // formResumeCreator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(890, 749);
+            this.Controls.Add(this.btnPDF);
             this.Controls.Add(this.txtbxSearch);
             this.Controls.Add(this.lblSearch);
             this.Controls.Add(this.txtbxCharRef2);
@@ -277,6 +289,7 @@
         private System.Windows.Forms.TextBox txtbxCharRef2;
         private System.Windows.Forms.Label lblSearch;
         private System.Windows.Forms.TextBox txtbxSearch;
+        private System.Windows.Forms.Button btnPDF;
     }
 }
 

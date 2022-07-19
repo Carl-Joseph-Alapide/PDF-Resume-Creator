@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Newtonsoft.Json;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
 
 namespace Json_to_PDF_App
 {
@@ -122,5 +124,18 @@ namespace Json_to_PDF_App
                 
             }
         }
+
+        private void btnPDF_Click(object sender, EventArgs e)
+        {
+            Document Docs = new Document(iTextSharp.text.PageSize.LETTER, 10, 10, 42, 35);
+            PdfWriter PDF = PdfWriter.GetInstance(Docs, new FileStream(@"C:\Users\Carl Joseph\source\repos\Json to PDF App\Json to PDF App\Resume\Alapide, Carl Joseph.pdf", FileMode.Create));
+            Docs.Open();
+
+            Paragraph Name = new Paragraph(txtbxName.Text);
+            Docs.Add(Name);
+            Docs.Close();
+        }
+        //var.indentationleft = 30f
+
     }
 }
