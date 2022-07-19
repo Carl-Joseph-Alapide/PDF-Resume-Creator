@@ -112,9 +112,9 @@
             this.lblObjective.AutoSize = true;
             this.lblObjective.Location = new System.Drawing.Point(349, 136);
             this.lblObjective.Name = "lblObjective";
-            this.lblObjective.Size = new System.Drawing.Size(55, 13);
+            this.lblObjective.Size = new System.Drawing.Size(39, 13);
             this.lblObjective.TabIndex = 29;
-            this.lblObjective.Text = "Objective:";
+            this.lblObjective.Text = "Profile:";
             // 
             // txtbxObjective
             // 
@@ -127,7 +127,7 @@
             // lblContact
             // 
             this.lblContact.AutoSize = true;
-            this.lblContact.Location = new System.Drawing.Point(28, 437);
+            this.lblContact.Location = new System.Drawing.Point(28, 283);
             this.lblContact.Name = "lblContact";
             this.lblContact.Size = new System.Drawing.Size(79, 13);
             this.lblContact.TabIndex = 31;
@@ -135,7 +135,7 @@
             // 
             // txtbxContact
             // 
-            this.txtbxContact.Location = new System.Drawing.Point(31, 453);
+            this.txtbxContact.Location = new System.Drawing.Point(31, 299);
             this.txtbxContact.Multiline = true;
             this.txtbxContact.Name = "txtbxContact";
             this.txtbxContact.Size = new System.Drawing.Size(306, 89);
@@ -161,7 +161,7 @@
             // lblSkills
             // 
             this.lblSkills.AutoSize = true;
-            this.lblSkills.Location = new System.Drawing.Point(32, 283);
+            this.lblSkills.Location = new System.Drawing.Point(32, 391);
             this.lblSkills.Name = "lblSkills";
             this.lblSkills.Size = new System.Drawing.Size(31, 13);
             this.lblSkills.TabIndex = 35;
@@ -169,7 +169,7 @@
             // 
             // txtbxSkills
             // 
-            this.txtbxSkills.Location = new System.Drawing.Point(31, 299);
+            this.txtbxSkills.Location = new System.Drawing.Point(31, 407);
             this.txtbxSkills.Multiline = true;
             this.txtbxSkills.Name = "txtbxSkills";
             this.txtbxSkills.Size = new System.Drawing.Size(306, 135);

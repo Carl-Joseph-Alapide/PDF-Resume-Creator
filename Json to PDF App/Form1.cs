@@ -22,17 +22,6 @@ namespace Json_to_PDF_App
 
         }
 
-        //static void Main(string[] args)
-        //{
-
-        //    //var Resume = new Resume_Content
-        //    //{
-              
-        //    //};
-
-        //}
-        //[Serializable]
-
         private class Resume_Content
         {
             public string Name { get; set; }
@@ -65,6 +54,7 @@ namespace Json_to_PDF_App
             public string Skill4 { get; set; }
             public string Skill5 { get; set; }
             public string Skill6 { get; set; }
+            public string Link { get; set; }
             public string GithubAccountLink { get; set; }
             public string CharacterReferenceName { get; set; }
             public string CharacterReferenceCompany { get; set; }
@@ -104,15 +94,17 @@ namespace Json_to_PDF_App
                 txtbxPosition.Text = Resume.Position;
                 txtbxObjective.Text = Resume.Objective;
                 txtbxContact.Text = Resume.ContactNo + "\r\n" + Resume.EmailAddress + "\r\n" + Resume.Address + "\r\n" + Resume.Facebook;
-                txtbxEducation.Text = Resume.School + "\r\n" + Resume.Course + "\r\n" + Resume.SchoolAddress + "\r\n" + Resume.SchoolYear + "\r\n" + "\r\n" +
-                                    Resume.School1 + "\r\n" + Resume.Strand + "\r\n" + Resume.SchoolAddress1 + "\r\n" + Resume.SchoolYear1 + "\r\n" + "\r\n" +
-                                    Resume.School2 + "\r\n" + Resume.SchoolAddress2 + "\r\n" + Resume.SchoolYear2 + "\r\n" + "\r\n" +
-                                    Resume.School3 + "\r\n" + Resume.SchoolAddress3 + "\r\n" + Resume.SchoolYear3 + "\r\n" + "\r\n" +
-                                    Resume.School4 + "\r\n" + Resume.SchoolAddress4 + "\r\n" + Resume.SchoolYear4;
-                txtbxSkills.Text = Resume.Skill1 + "\r\n" + Resume.Skill2 + "\r\n" + Resume.Skill3 + "\r\n" + Resume.Skill4 + "\r\n" + Resume.Skill5 + "\r\n" + Resume.Skill6 + "\r\n" + "\r\n" + Resume.GithubAccountLink;
-                txtbxCharRef.Text = Resume.CharacterReferenceName + "\r\n" + Resume.CharacterReferenceCompany + "\r\n" + Resume.CharacterReferencePosition + "\r\n" + Resume.CharacterReferenceMobile;
-                txtbxCharRef1.Text = Resume.CharacterReferenceName1 + "\r\n" + Resume.CharacterReferenceCompany1 + "\r\n" + Resume.CharacterReferencePosition1 + "\r\n" + Resume.CharacterReferenceMobile1;
-                txtbxCharRef2.Text = Resume.CharacterReferenceName2 + "\r\n" + Resume.CharacterReferenceCompany2 + "\r\n" + Resume.CharacterReferencePosition2 + "\r\n" + Resume.CharacterReferenceMobile2;
+                txtbxEducation.Text = "College" + "                                                                        " + "Senior HighSchool" + "\r\n" + Resume.School + "                    " + Resume.School1 + "\r\n" +
+                                     Resume.Course + "           " + Resume.Strand + "\r\n" + Resume.SchoolAddress + "                                                        " + Resume.SchoolAddress1 + "\r\n" +
+                                     Resume.SchoolYear + "                                                              " + Resume.SchoolYear1 + "\r\n" + "\r\n" + "HighSchool" + "                                       " + "Elementary" + "\r\n" +
+                                     Resume.School2 + "                              " + Resume.School3 + "\r\n" + Resume.SchoolAddress2 + "           " + Resume.SchoolAddress3 + "\r\n" +
+                                     Resume.SchoolYear2 + "                                        " + Resume.SchoolYear3 + "\r\n" + "\r\n" + "Elementary" + "\r\n" + Resume.School4 + "\r\n" + Resume.SchoolAddress4 + "\r\n" +
+                                     Resume.SchoolYear4;
+
+                txtbxSkills.Text = Resume.Skill1 + "              " + Resume.Skill2 + "            " + Resume.Skill3 + "\r\n" + Resume.Skill4 + "          " + Resume.Skill5 + "              " + Resume.Skill6 + "\r\n" + "\r\n" + Resume.Link + "\r\n" +  Resume.GithubAccountLink;
+                txtbxCharRef.Text = Resume.CharacterReferenceName + "\r\n" + Resume.CharacterReferencePosition + "\r\n" + Resume.CharacterReferenceCompany + "\r\n" + Resume.CharacterReferenceMobile + ".";
+                txtbxCharRef1.Text = Resume.CharacterReferenceName1 + "\r\n" + Resume.CharacterReferencePosition1 + "\r\n" + Resume.CharacterReferenceCompany1 + "\r\n" + Resume.CharacterReferenceMobile1 + ".";
+                txtbxCharRef2.Text = Resume.CharacterReferenceName2 + "\r\n" + Resume.CharacterReferencePosition2 + "\r\n" + Resume.CharacterReferenceCompany2 + "\r\n" + Resume.CharacterReferenceMobile2 + ".";
                 txtbxSearch.Clear();
             }
             catch (Exception)
@@ -128,26 +120,140 @@ namespace Json_to_PDF_App
         private void btnPDF_Click(object sender, EventArgs e)
         {
             Document Docs = new Document(iTextSharp.text.PageSize.LETTER, 10, 10, 42, 35);
-            PdfWriter PDF = PdfWriter.GetInstance(Docs, new FileStream(@"C:\Users\Carl Joseph\source\repos\Json to PDF App\Json to PDF App\Resume\Alapide, Carl Joseph.pdf", FileMode.Create));
+            PdfWriter PDF = PdfWriter.GetInstance(Docs, new FileStream(@"C:\Users\Carl Joseph\source\repos\Json to PDF App\Json to PDF App\Resume\Alapide, Carl Joseph Resume.pdf", FileMode.Create));
             Docs.Open();
 
             iTextSharp.text.Image Photo = iTextSharp.text.Image.GetInstance(@"C:\Users\Carl Joseph\source\repos\Json to PDF App\Json to PDF App\Resume\"+ txtbxPhoto.Text);
-            Photo.ScalePercent(30f);
-            Photo.SetAbsolutePosition(Docs.PageSize.Width - 20f - 180f, Docs.PageSize.Height - 36f - 150.6f);
+            Photo.ScalePercent(25f);
+            Photo.SetAbsolutePosition(Docs.PageSize.Width - 20f - 170f, Docs.PageSize.Height - 36f - 150.6f);
             Photo.Border = iTextSharp.text.Rectangle.BOX;
             Photo.BorderColor = iTextSharp.text.BaseColor.BLACK;
             Photo.BorderWidth = 2f;
             Docs.Add(Photo);
 
+
             Paragraph Name = new Paragraph(txtbxName.Text);
             Paragraph Position = new Paragraph(txtbxPosition.Text);
             Paragraph objective = new Paragraph(txtbxObjective.Text);
+            Paragraph contact = new Paragraph(txtbxContact.Text);
             Paragraph Skills = new Paragraph(txtbxSkills.Text);
-            Name.Font.Size = 30f;
+            Paragraph Education = new Paragraph(txtbxEducation.Text);
+            Paragraph char_Ref = new Paragraph(txtbxCharRef.Text);
+            Paragraph char_Ref1 = new Paragraph(txtbxCharRef1.Text);
+            Paragraph char_Ref2 = new Paragraph(txtbxCharRef2.Text);
+            Paragraph ProfileTitle = new Paragraph("Profile");
+            Paragraph SkillTitle = new Paragraph("Skills");
+            Paragraph EducationTitle = new Paragraph("Educational background");
+            Paragraph CharTitle = new Paragraph("Character Reference");
+            Chunk Divider = new Chunk("         ________________________________________________");
+            Chunk Space = new Chunk("                                         ");
+
+            Name.Font.Size = 25f;
+            Name.IndentationLeft = 40f;
+            Name.Font.SetStyle("bold");
+            Name.Font.SetFamily("Courier");
+
+            Position.Font.Size = 15f;
+            Position.IndentationLeft = 145f;
+            Position.Font.SetFamily("Times New Roman");
+            
+            objective.Font.Size = 12f;
+            objective.Font.SetFamily("Times New Roman");
+            objective.Alignment = Element.ALIGN_LEFT;
+            objective.IndentationLeft = 25f;
+            objective.IndentationRight = 30f;
+
+            contact.Font.Size = 10f;
+            contact.IndentationLeft = 25f;
+            contact.Alignment = Element.ALIGN_LEFT;
+            contact.Font.SetFamily("Times New Roman");
+
+            Skills.Font.Size = 10f;
+            Skills.Alignment = Element.ALIGN_LEFT;
+            Skills.Font.SetFamily("Times New Roman");
+            Skills.IndentationLeft = 25;
+            Skills.IndentationRight = 25;
+
+            Education.Font.Size = 10;
+            Education.Alignment = Element.ALIGN_LEFT;
+            Education.Font.SetFamily("Times New Roman");
+            Education.IndentationLeft = 25f;
+            Education.IndentationRight = 25f;
+
+            char_Ref.Font.Size = 10;
+            char_Ref.Alignment = Element.ALIGN_LEFT;
+            char_Ref.Font.SetFamily("Times New Roman");
+            char_Ref.IndentationLeft = 25f;
+            char_Ref.IndentationRight = 25f;
+
+            char_Ref1.Font.Size = 10;
+            char_Ref1.Alignment = Element.ALIGN_LEFT;
+            char_Ref1.Font.SetFamily("Times New Roman");
+            char_Ref1.IndentationLeft = 25f;
+            char_Ref1.IndentationRight = 25f;
+
+            char_Ref2.Font.Size = 10;
+            char_Ref2.Alignment = Element.ALIGN_LEFT;
+            char_Ref2.Font.SetFamily("Times New Roman");
+            char_Ref2.IndentationLeft = 25f;
+            char_Ref2.IndentationRight = 25f;
+
+            ProfileTitle.Font.Size = 18f;
+            ProfileTitle.IndentationLeft = 25f;
+            ProfileTitle.Font.SetStyle("bold");
+            ProfileTitle.Font.SetFamily("Times New Roman");
+            ProfileTitle.Alignment = Element.ALIGN_LEFT;
+
+            SkillTitle.Font.Size = 18f;
+            SkillTitle.IndentationLeft = 25f;
+            SkillTitle.Font.SetStyle("bold");
+            SkillTitle.Font.SetFamily("Times New Roman");
+            SkillTitle.Alignment = Element.ALIGN_LEFT;
+
+            EducationTitle.Font.Size = 18f;
+            EducationTitle.IndentationLeft = 25f;
+            EducationTitle.Font.SetStyle("bold");
+            EducationTitle.Font.SetFamily("Times New Roman");
+            EducationTitle.Alignment = Element.ALIGN_LEFT;
+
+            CharTitle.Font.Size = 18f;
+            CharTitle.IndentationLeft = 25f;
+            CharTitle.Font.SetStyle("bold");
+            CharTitle.Font.SetFamily("Times New Roman");
+            CharTitle.Alignment = Element.ALIGN_LEFT;
+
             Docs.Add(Name);
+            Docs.Add(Position);
+            Docs.Add(contact);
+            Docs.Add(Divider);
+            Docs.Add(Space);
+            Docs.Add(Space);
+            Docs.Add(ProfileTitle);
+            Docs.Add(Space);
+            Docs.Add(objective);
+            Docs.Add(Space);
+            Docs.Add(SkillTitle);
+            Docs.Add(Space);
+            Docs.Add(Skills);
+            Docs.Add(Space);
+            Docs.Add(EducationTitle);
+            Docs.Add(Space);
+            Docs.Add(Education);
+            Docs.Add(Space);
+            Docs.Add(Space);
+            Docs.Add(Space);
+            Docs.Add(Space);
+            Docs.Add(Space);
+            Docs.Add(CharTitle);
+            Docs.Add(Space);
+            Docs.Add(char_Ref);
+            Docs.Add(Space);
+            Docs.Add(char_Ref1);
+            Docs.Add(Space);
+            Docs.Add(char_Ref2);
+
             Docs.Close();
         }
-        //var.indentationleft = 30f
 
     }
 }
