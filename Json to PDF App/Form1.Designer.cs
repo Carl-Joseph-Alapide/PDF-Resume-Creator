@@ -53,6 +53,7 @@
             this.lblPhoto = new System.Windows.Forms.Label();
             this.lblPhotoAdd = new System.Windows.Forms.Label();
             this.txtbxPhoto = new System.Windows.Forms.TextBox();
+            this.btnClear = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblHeader
@@ -260,12 +261,23 @@
             this.txtbxPhoto.Size = new System.Drawing.Size(173, 20);
             this.txtbxPhoto.TabIndex = 45;
             // 
+            // btnClear
+            // 
+            this.btnClear.Location = new System.Drawing.Point(31, 706);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(86, 30);
+            this.btnClear.TabIndex = 46;
+            this.btnClear.Text = "Clear All";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
             // formResumeCreator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(890, 749);
+            this.Controls.Add(this.btnClear);
             this.Controls.Add(this.txtbxPhoto);
             this.Controls.Add(this.lblPhotoAdd);
             this.Controls.Add(this.lblPhoto);
@@ -324,6 +336,7 @@
         private System.Windows.Forms.Label lblPhoto;
         private System.Windows.Forms.Label lblPhotoAdd;
         private System.Windows.Forms.TextBox txtbxPhoto;
+        private System.Windows.Forms.Button btnClear;
     }
 }
 

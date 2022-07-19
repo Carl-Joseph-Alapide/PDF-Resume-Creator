@@ -119,170 +119,179 @@ namespace Json_to_PDF_App
 
         private void btnPDF_Click(object sender, EventArgs e)
         {
-            bool Continue = true;
-            Document Docs = new Document(iTextSharp.text.PageSize.LETTER, 10, 10, 42, 35);
-            PdfWriter PDF = PdfWriter.GetInstance(Docs, new FileStream(@"C:\Users\Carl Joseph\source\repos\Json to PDF App\Json to PDF App\Resume\Alapide, Carl Joseph Resume.pdf", FileMode.Create));
-            Docs.Open();
-            try
+            if ((!string.IsNullOrEmpty(txtbxName.Text)) && (!string.IsNullOrEmpty(txtbxPosition.Text))&& (!string.IsNullOrEmpty(txtbxObjective.Text))&& (!string.IsNullOrEmpty(txtbxSkills.Text))&& (!string.IsNullOrEmpty(txtbxEducation.Text))&&(!string.IsNullOrEmpty(txtbxContact.Text))&& (!string.IsNullOrEmpty(txtbxCharRef.Text)))
             {
-
-                iTextSharp.text.Image Photo = iTextSharp.text.Image.GetInstance(@"C:\Users\Carl Joseph\source\repos\Json to PDF App\Json to PDF App\Resume\" + txtbxPhoto.Text);
-                Photo.ScalePercent(25f);
-                Photo.SetAbsolutePosition(Docs.PageSize.Width - 20f - 170f, Docs.PageSize.Height - 36f - 150.6f);
-                Photo.Border = iTextSharp.text.Rectangle.BOX;
-                Photo.BorderColor = iTextSharp.text.BaseColor.BLACK;
-                Photo.BorderWidth = 2f;
-                Docs.Add(Photo);
-            }
-
-            catch (Exception)
-            {
-                Continue = false;
-                if (string.IsNullOrEmpty(txtbxPhoto.Text))
+                Document Docs = new Document(iTextSharp.text.PageSize.LETTER, 10, 10, 42, 35);
+                PdfWriter PDF = PdfWriter.GetInstance(Docs, new FileStream(@"C:\Users\Carl Joseph\source\repos\Json to PDF App\Json to PDF App\Resume\Alapide, Carl Joseph Resume.pdf", FileMode.Create));
+                Docs.Open();
+                try
                 {
-                    MessageBox.Show("Please type the file name of your resume photo","Incomplete Details");
-                }
-                else
-                {
-                    MessageBox.Show("Sorry We couldn't find an image with this File name","Incomplete Details");
-                }
-            }
 
-            if (string.IsNullOrEmpty(txtbxName.Text))
-            {
-                MessageBox.Show("Please Fill out all the details", "Incomplete Details");
-            }
-            else if (Continue == false)
-            {
-                MessageBox.Show("Please Fill out all the details", "Incomplete Details");
+                    iTextSharp.text.Image Photo = iTextSharp.text.Image.GetInstance(@"C:\Users\Carl Joseph\source\repos\Json to PDF App\Json to PDF App\Resume\" + txtbxPhoto.Text);
+                    Photo.ScalePercent(25f);
+                    Photo.SetAbsolutePosition(Docs.PageSize.Width - 20f - 170f, Docs.PageSize.Height - 36f - 150.6f);
+                    Photo.Border = iTextSharp.text.Rectangle.BOX;
+                    Photo.BorderColor = iTextSharp.text.BaseColor.BLACK;
+                    Photo.BorderWidth = 2f;
+                    Docs.Add(Photo);
+                }
+
+                catch (Exception)
+                {
+                    if (string.IsNullOrEmpty(txtbxPhoto.Text))
+                    {
+                        MessageBox.Show("Your Resume will be created without photo", "Processing Resume");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Your Resume will be created without photo", "Processing Resume");
+                    }
+                }
+ 
+                    Paragraph Name = new Paragraph(txtbxName.Text);
+                    Paragraph Position = new Paragraph(txtbxPosition.Text);
+                    Paragraph objective = new Paragraph(txtbxObjective.Text);
+                    Paragraph contact = new Paragraph(txtbxContact.Text);
+                    Paragraph Skills = new Paragraph(txtbxSkills.Text);
+                    Paragraph Education = new Paragraph(txtbxEducation.Text);
+                    Paragraph char_Ref = new Paragraph(txtbxCharRef.Text);
+                    Paragraph char_Ref1 = new Paragraph(txtbxCharRef1.Text);
+                    Paragraph char_Ref2 = new Paragraph(txtbxCharRef2.Text);
+                    Paragraph ProfileTitle = new Paragraph("Profile");
+                    Paragraph SkillTitle = new Paragraph("Skills");
+                    Paragraph EducationTitle = new Paragraph("Educational background");
+                    Paragraph CharTitle = new Paragraph("Character Reference");
+                    Chunk Divider = new Chunk("         ________________________________________________");
+                    Chunk Space = new Chunk("                                         ");
+
+                    Name.Font.Size = 25f;
+                    Name.IndentationLeft = 40f;
+                    Name.Font.SetStyle("bold");
+                    Name.Font.SetFamily("Courier");
+
+                    Position.Font.Size = 15f;
+                    Position.IndentationLeft = 145f;
+                    Position.Font.SetFamily("Times New Roman");
+
+                    objective.Font.Size = 12f;
+                    objective.Font.SetFamily("Times New Roman");
+                    objective.Alignment = Element.ALIGN_LEFT;
+                    objective.IndentationLeft = 25f;
+                    objective.IndentationRight = 30f;
+
+                    contact.Font.Size = 10f;
+                    contact.IndentationLeft = 25f;
+                    contact.Alignment = Element.ALIGN_LEFT;
+                    contact.Font.SetFamily("Times New Roman");
+
+                    Skills.Font.Size = 10f;
+                    Skills.Alignment = Element.ALIGN_LEFT;
+                    Skills.Font.SetFamily("Times New Roman");
+                    Skills.IndentationLeft = 25;
+                    Skills.IndentationRight = 25;
+
+                    Education.Font.Size = 10;
+                    Education.Alignment = Element.ALIGN_LEFT;
+                    Education.Font.SetFamily("Times New Roman");
+                    Education.IndentationLeft = 25f;
+                    Education.IndentationRight = 25f;
+
+                    char_Ref.Font.Size = 10;
+                    char_Ref.Alignment = Element.ALIGN_LEFT;
+                    char_Ref.Font.SetFamily("Times New Roman");
+                    char_Ref.IndentationLeft = 25f;
+                    char_Ref.IndentationRight = 25f;
+
+                    char_Ref1.Font.Size = 10;
+                    char_Ref1.Alignment = Element.ALIGN_LEFT;
+                    char_Ref1.Font.SetFamily("Times New Roman");
+                    char_Ref1.IndentationLeft = 25f;
+                    char_Ref1.IndentationRight = 25f;
+
+                    char_Ref2.Font.Size = 10;
+                    char_Ref2.Alignment = Element.ALIGN_LEFT;
+                    char_Ref2.Font.SetFamily("Times New Roman");
+                    char_Ref2.IndentationLeft = 25f;
+                    char_Ref2.IndentationRight = 25f;
+
+                    ProfileTitle.Font.Size = 18f;
+                    ProfileTitle.IndentationLeft = 25f;
+                    ProfileTitle.Font.SetStyle("bold");
+                    ProfileTitle.Font.SetFamily("Times New Roman");
+                    ProfileTitle.Alignment = Element.ALIGN_LEFT;
+
+                    SkillTitle.Font.Size = 18f;
+                    SkillTitle.IndentationLeft = 25f;
+                    SkillTitle.Font.SetStyle("bold");
+                    SkillTitle.Font.SetFamily("Times New Roman");
+                    SkillTitle.Alignment = Element.ALIGN_LEFT;
+
+                    EducationTitle.Font.Size = 18f;
+                    EducationTitle.IndentationLeft = 25f;
+                    EducationTitle.Font.SetStyle("bold");
+                    EducationTitle.Font.SetFamily("Times New Roman");
+                    EducationTitle.Alignment = Element.ALIGN_LEFT;
+
+                    CharTitle.Font.Size = 18f;
+                    CharTitle.IndentationLeft = 25f;
+                    CharTitle.Font.SetStyle("bold");
+                    CharTitle.Font.SetFamily("Times New Roman");
+                    CharTitle.Alignment = Element.ALIGN_LEFT;
+
+                    Docs.Add(Name);
+                    Docs.Add(Position);
+                    Docs.Add(contact);
+                    Docs.Add(Divider);
+                    Docs.Add(Space);
+                    Docs.Add(Space);
+                    Docs.Add(ProfileTitle);
+                    Docs.Add(Space);
+                    Docs.Add(objective);
+                    Docs.Add(Space);
+                    Docs.Add(SkillTitle);
+                    Docs.Add(Space);
+                    Docs.Add(Skills);
+                    Docs.Add(Space);
+                    Docs.Add(EducationTitle);
+                    Docs.Add(Space);
+                    Docs.Add(Education);
+                    Docs.Add(Space);
+                    Docs.Add(Space);
+                    Docs.Add(Space);
+                    Docs.Add(Space);
+                    Docs.Add(Space);
+                    Docs.Add(CharTitle);
+                    Docs.Add(Space);
+                    Docs.Add(char_Ref);
+                    Docs.Add(Space);
+                    Docs.Add(char_Ref1);
+                    Docs.Add(Space);
+                    Docs.Add(char_Ref2);
+
+                    Docs.Close();
+
+                    MessageBox.Show("A PDF of your Resume was Created", "Success");
+              
             }
             else
             {
-                Paragraph Name = new Paragraph(txtbxName.Text);
-                Paragraph Position = new Paragraph(txtbxPosition.Text);
-                Paragraph objective = new Paragraph(txtbxObjective.Text);
-                Paragraph contact = new Paragraph(txtbxContact.Text);
-                Paragraph Skills = new Paragraph(txtbxSkills.Text);
-                Paragraph Education = new Paragraph(txtbxEducation.Text);
-                Paragraph char_Ref = new Paragraph(txtbxCharRef.Text);
-                Paragraph char_Ref1 = new Paragraph(txtbxCharRef1.Text);
-                Paragraph char_Ref2 = new Paragraph(txtbxCharRef2.Text);
-                Paragraph ProfileTitle = new Paragraph("Profile");
-                Paragraph SkillTitle = new Paragraph("Skills");
-                Paragraph EducationTitle = new Paragraph("Educational background");
-                Paragraph CharTitle = new Paragraph("Character Reference");
-                Chunk Divider = new Chunk("         ________________________________________________");
-                Chunk Space = new Chunk("                                         ");
-
-                Name.Font.Size = 25f;
-                Name.IndentationLeft = 40f;
-                Name.Font.SetStyle("bold");
-                Name.Font.SetFamily("Courier");
-
-                Position.Font.Size = 15f;
-                Position.IndentationLeft = 145f;
-                Position.Font.SetFamily("Times New Roman");
-
-                objective.Font.Size = 12f;
-                objective.Font.SetFamily("Times New Roman");
-                objective.Alignment = Element.ALIGN_LEFT;
-                objective.IndentationLeft = 25f;
-                objective.IndentationRight = 30f;
-
-                contact.Font.Size = 10f;
-                contact.IndentationLeft = 25f;
-                contact.Alignment = Element.ALIGN_LEFT;
-                contact.Font.SetFamily("Times New Roman");
-
-                Skills.Font.Size = 10f;
-                Skills.Alignment = Element.ALIGN_LEFT;
-                Skills.Font.SetFamily("Times New Roman");
-                Skills.IndentationLeft = 25;
-                Skills.IndentationRight = 25;
-
-                Education.Font.Size = 10;
-                Education.Alignment = Element.ALIGN_LEFT;
-                Education.Font.SetFamily("Times New Roman");
-                Education.IndentationLeft = 25f;
-                Education.IndentationRight = 25f;
-
-                char_Ref.Font.Size = 10;
-                char_Ref.Alignment = Element.ALIGN_LEFT;
-                char_Ref.Font.SetFamily("Times New Roman");
-                char_Ref.IndentationLeft = 25f;
-                char_Ref.IndentationRight = 25f;
-
-                char_Ref1.Font.Size = 10;
-                char_Ref1.Alignment = Element.ALIGN_LEFT;
-                char_Ref1.Font.SetFamily("Times New Roman");
-                char_Ref1.IndentationLeft = 25f;
-                char_Ref1.IndentationRight = 25f;
-
-                char_Ref2.Font.Size = 10;
-                char_Ref2.Alignment = Element.ALIGN_LEFT;
-                char_Ref2.Font.SetFamily("Times New Roman");
-                char_Ref2.IndentationLeft = 25f;
-                char_Ref2.IndentationRight = 25f;
-
-                ProfileTitle.Font.Size = 18f;
-                ProfileTitle.IndentationLeft = 25f;
-                ProfileTitle.Font.SetStyle("bold");
-                ProfileTitle.Font.SetFamily("Times New Roman");
-                ProfileTitle.Alignment = Element.ALIGN_LEFT;
-
-                SkillTitle.Font.Size = 18f;
-                SkillTitle.IndentationLeft = 25f;
-                SkillTitle.Font.SetStyle("bold");
-                SkillTitle.Font.SetFamily("Times New Roman");
-                SkillTitle.Alignment = Element.ALIGN_LEFT;
-
-                EducationTitle.Font.Size = 18f;
-                EducationTitle.IndentationLeft = 25f;
-                EducationTitle.Font.SetStyle("bold");
-                EducationTitle.Font.SetFamily("Times New Roman");
-                EducationTitle.Alignment = Element.ALIGN_LEFT;
-
-                CharTitle.Font.Size = 18f;
-                CharTitle.IndentationLeft = 25f;
-                CharTitle.Font.SetStyle("bold");
-                CharTitle.Font.SetFamily("Times New Roman");
-                CharTitle.Alignment = Element.ALIGN_LEFT;
-
-                Docs.Add(Name);
-                Docs.Add(Position);
-                Docs.Add(contact);
-                Docs.Add(Divider);
-                Docs.Add(Space);
-                Docs.Add(Space);
-                Docs.Add(ProfileTitle);
-                Docs.Add(Space);
-                Docs.Add(objective);
-                Docs.Add(Space);
-                Docs.Add(SkillTitle);
-                Docs.Add(Space);
-                Docs.Add(Skills);
-                Docs.Add(Space);
-                Docs.Add(EducationTitle);
-                Docs.Add(Space);
-                Docs.Add(Education);
-                Docs.Add(Space);
-                Docs.Add(Space);
-                Docs.Add(Space);
-                Docs.Add(Space);
-                Docs.Add(Space);
-                Docs.Add(CharTitle);
-                Docs.Add(Space);
-                Docs.Add(char_Ref);
-                Docs.Add(Space);
-                Docs.Add(char_Ref1);
-                Docs.Add(Space);
-                Docs.Add(char_Ref2);
-
-                Docs.Close();
-
-                MessageBox.Show("A PDF of your Resume was Created", "Success");
+                MessageBox.Show("Please Fill out all the details", "Incomplete Information");
             }
         }
 
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            txtbxName.Clear();
+            txtbxPosition.Clear();
+            txtbxObjective.Clear();
+            txtbxContact.Clear();
+            txtbxEducation.Clear();
+            txtbxSkills.Clear();
+            txtbxCharRef.Clear();
+            txtbxCharRef1.Clear();
+            txtbxCharRef2.Clear();
+            txtbxPhoto.Clear();
+            txtbxSearch.Clear();
+        }
     }
 }
