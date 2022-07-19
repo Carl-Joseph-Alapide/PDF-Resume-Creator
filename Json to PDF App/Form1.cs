@@ -140,11 +140,12 @@ namespace Json_to_PDF_App
                 {
                     if (string.IsNullOrEmpty(txtbxPhoto.Text))
                     {
-                        MessageBox.Show("Your Resume will be created without photo", "Processing Resume");
+                        MessageBox.Show("Your Resume will be created without a photo", "Processing Resume");
                     }
                     else
                     {
-                        MessageBox.Show("Your Resume will be created without photo", "Processing Resume");
+                        MessageBox.Show("Could not find the file name you've input", "Processing Resume");
+                        MessageBox.Show("Your Resume will be created without a photo", "Processing Resume");
                     }
                 }
  
@@ -173,66 +174,66 @@ namespace Json_to_PDF_App
                     Position.IndentationLeft = 145f;
                     Position.Font.SetFamily("Times New Roman");
 
-                    objective.Font.Size = 12f;
+                    objective.Font.Size = 11f;
                     objective.Font.SetFamily("Times New Roman");
                     objective.Alignment = Element.ALIGN_LEFT;
                     objective.IndentationLeft = 25f;
                     objective.IndentationRight = 30f;
 
-                    contact.Font.Size = 10f;
+                    contact.Font.Size = 11f;
                     contact.IndentationLeft = 25f;
                     contact.Alignment = Element.ALIGN_LEFT;
                     contact.Font.SetFamily("Times New Roman");
 
-                    Skills.Font.Size = 10f;
+                    Skills.Font.Size = 11f;
                     Skills.Alignment = Element.ALIGN_LEFT;
                     Skills.Font.SetFamily("Times New Roman");
                     Skills.IndentationLeft = 25;
                     Skills.IndentationRight = 25;
 
-                    Education.Font.Size = 10;
+                    Education.Font.Size = 11f;
                     Education.Alignment = Element.ALIGN_LEFT;
                     Education.Font.SetFamily("Times New Roman");
                     Education.IndentationLeft = 25f;
                     Education.IndentationRight = 25f;
 
-                    char_Ref.Font.Size = 10;
+                    char_Ref.Font.Size = 11f;
                     char_Ref.Alignment = Element.ALIGN_LEFT;
                     char_Ref.Font.SetFamily("Times New Roman");
                     char_Ref.IndentationLeft = 25f;
                     char_Ref.IndentationRight = 25f;
 
-                    char_Ref1.Font.Size = 10;
+                    char_Ref1.Font.Size = 11f;
                     char_Ref1.Alignment = Element.ALIGN_LEFT;
                     char_Ref1.Font.SetFamily("Times New Roman");
                     char_Ref1.IndentationLeft = 25f;
                     char_Ref1.IndentationRight = 25f;
 
-                    char_Ref2.Font.Size = 10;
+                    char_Ref2.Font.Size = 11f;
                     char_Ref2.Alignment = Element.ALIGN_LEFT;
                     char_Ref2.Font.SetFamily("Times New Roman");
                     char_Ref2.IndentationLeft = 25f;
                     char_Ref2.IndentationRight = 25f;
 
-                    ProfileTitle.Font.Size = 18f;
+                    ProfileTitle.Font.Size = 16f;
                     ProfileTitle.IndentationLeft = 25f;
                     ProfileTitle.Font.SetStyle("bold");
                     ProfileTitle.Font.SetFamily("Times New Roman");
                     ProfileTitle.Alignment = Element.ALIGN_LEFT;
 
-                    SkillTitle.Font.Size = 18f;
+                    SkillTitle.Font.Size = 16f;
                     SkillTitle.IndentationLeft = 25f;
                     SkillTitle.Font.SetStyle("bold");
                     SkillTitle.Font.SetFamily("Times New Roman");
                     SkillTitle.Alignment = Element.ALIGN_LEFT;
 
-                    EducationTitle.Font.Size = 18f;
+                    EducationTitle.Font.Size = 16f;
                     EducationTitle.IndentationLeft = 25f;
                     EducationTitle.Font.SetStyle("bold");
                     EducationTitle.Font.SetFamily("Times New Roman");
                     EducationTitle.Alignment = Element.ALIGN_LEFT;
 
-                    CharTitle.Font.Size = 18f;
+                    CharTitle.Font.Size = 16f;
                     CharTitle.IndentationLeft = 25f;
                     CharTitle.Font.SetStyle("bold");
                     CharTitle.Font.SetFamily("Times New Roman");
@@ -255,9 +256,6 @@ namespace Json_to_PDF_App
                     Docs.Add(EducationTitle);
                     Docs.Add(Space);
                     Docs.Add(Education);
-                    Docs.Add(Space);
-                    Docs.Add(Space);
-                    Docs.Add(Space);
                     Docs.Add(Space);
                     Docs.Add(Space);
                     Docs.Add(CharTitle);
